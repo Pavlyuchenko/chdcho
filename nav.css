@@ -1,0 +1,43 @@
+nav {
+    height: 80px; /* TODO: delete later probably */
+    margin: 10px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 0.75em;
+    margin: -0.75em;
+}
+nav a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+#nav-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #f0f0f0;
+    width: 100%;
+    margin: 0;
+}

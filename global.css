@@ -1,0 +1,181 @@
+/**
+ * Design specification:
+ *      - Font: Minion Pro
+ *          - bold (700) for any buttons, titles (headings) and links
+ *          - regular (400) for any other text, especially paragraphs
+ *      - Primary color: #c20d0e (--red)
+ *      - Margin around content: 50px on the sides, 10px from the top
+ *      - Height of navigation: 80px
+ *      - Heading's margin top: 80px
+ *      - Callout
+ *          - margin: 20px 30px
+            - bg color: #F7E1E1
+            - border: #DFCBCB 1px solid
+*/
+
+:root {
+    --red: #c20d0e;
+}
+
+@font-face {
+    font-family: "Minion Pro";
+    src: url("../fonts/MinionPro-Regular.otf");
+    font-weight: 400; /* normal */
+}
+
+@font-face {
+    font-family: "Minion Pro";
+    src: url("../fonts/MinionPro-Bold.otf");
+    font-weight: 700; /* bold */
+}
+
+html,
+body {
+    font-family: "Minion Pro", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 80px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 40px;
+
+    color: var(--red);
+}
+/* a red dash in front */
+h2::before {
+    content: "";
+    display: inline-block;
+
+    width: 38px;
+    height: 6px;
+    margin-right: 18px;
+
+    background-color: var(--red);
+
+    vertical-align: middle;
+}
+
+/* BUTTON */
+.button-primary {
+    display: inline-block;
+
+    font-weight: 700;
+    font-size: 24px;
+
+    color: white;
+    background-color: var(--red);
+
+    padding: 5px 15px;
+    margin: 0px;
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+.button-primary:hover {
+    background-color: #a00;
+    text-decoration: underline;
+    color: #fff;
+}
+.button-primary:focus-visible {
+    background-color: #800;
+}
+.button-primary:active {
+    background-color: #600;
+}
+
+.accessible-outline:focus-visible {
+    outline: 4px solid #5a9ed1;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px white;
+
+    z-index: 10000;
+}
+
+/* PARAGRAPH */
+p {
+    font-size: 24px;
+}
+
+/* CALLOUT */
+.callout {
+    display: flex;
+
+    width: 100%;
+
+    margin: 40px 0px;
+}
+.callout-text {
+    font-weight: 500;
+    font-size: 20px;
+
+    background-color: #f7e1e1;
+    border: #dfcbcb 1px solid;
+    border-left: 0;
+
+    padding: 10px 15px;
+
+    position: relative;
+
+    width: 100%;
+
+    display: grid;
+}
+/* Dash before callout height 100% widht 8px */
+.callout-dash {
+    content: "";
+    display: inline-block;
+
+    width: 8px;
+
+    background-color: var(--red);
+}
+
+/* Success Badge */
+.success-badge {
+    font-size: 24px;
+    font-weight: normal;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* Circle Styles */
+.circle {
+    width: 24px;
+    height: 24px;
+    background-color: var(--red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+/* Tick styles */
+.tick {
+    width: 8px;
+    height: 4px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
