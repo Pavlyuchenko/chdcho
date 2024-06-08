@@ -1,0 +1,165 @@
+#hero {
+    width: 100%;
+    height: 100vh;
+    max-height: 650px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("gradient.png") no-repeat;
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
+}
+.title-text {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+
+    color: white;
+    background-color: var(--red);
+
+    padding: 20px 50px;
+
+    border-radius: 0 5px 5px 0;
+
+    z-index: 10;
+}
+.title-text p {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+/* SWIPER */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    max-height: 650px;
+
+    position: relative;
+}
+.swiper-slide {
+    height: auto !important;
+    position: relative;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Custom Pagination */
+.swiper-pagination {
+    bottom: 10px !important;
+    text-align: center;
+}
+.swiper-pagination-bullet {
+    width: 40px;
+    height: 6px;
+    border-radius: 0;
+
+    margin: 0 7px !important;
+
+    background-color: #fff;
+    opacity: 1;
+    cursor: pointer;
+
+    position: relative;
+}
+/* This makes the rectangle navigation clickable are larger, so that it's easier to click on */
+.swiper-pagination-bullet::before {
+    content: "";
+    position: absolute;
+    top: -24px;
+    left: -7px;
+    right: -7px;
+    bottom: -15px;
+    cursor: pointer;
+}
+/* make the first occurence more clickable from left */
+.swiper-pagination-bullet:first-of-type::before {
+    left: -25px;
+}
+/* make the last occurence more clickable from right */
+.swiper-pagination-bullet:last-of-type::before {
+    right: -25px;
+}
+.swiper-pagination-bullet:focus-visible {
+    outline: 4px solid #5a9ed1;
+    outline-offset: 4px;
+    box-shadow: 0 0 0 6px black;
+
+    z-index: 10000;
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--red);
+}
+
+/* SLUZBY */
+#sluzby {
+    margin: 0 50px;
+}
+
+#sluzby-grid {
+    /* 3x3 */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+    column-gap: 60px;
+
+    /* all divs same height and width, centered */
+    align-items: center;
+    justify-items: center;
+}
+
+.sluzba-container {
+    background-color: var(--red);
+    width: 100%;
+    height: 350px;
+}
+
+/* PARTNERI */
+#partneri {
+    margin: 0 50px;
+}
+
+/* NAHRADNI PLNENI */
+#nahradni-plneni {
+    margin: 0 50px;
+}
+
+/* KDE NAS NAJDETE */
+#kde-nas-najdete {
+    margin: 0 50px;
+}
+
+#kde-nas-najdete iframe {
+    --space-around: 200px;
+    margin-left: var(--space-around);
+    margin-right: var(--space-around);
+    width: calc(100% - var(--space-around) * 2);
+
+    border: 7px solid var(--red);
+}
+#kde-nas-najdete h2 {
+    margin-bottom: 0;
+}
+
+#kde-nas-najdete p {
+    margin-left: 56px;
+    margin-top: 0;
+}

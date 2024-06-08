@@ -7,26 +7,33 @@
 
         <link rel="stylesheet" href="global.css" />
         <link rel="stylesheet" href="nav.css" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="index.css" />
 
         <link
             rel="preload"
-            href="fonts/MinionPro-Bold.otf"
+            href="fonts/Alegreya-Bold.ttf"
             as="font"
-            type="font/otf"
+            type="font/ttf"
             crossorigin="anonymous"
         />
         <link
             rel="preload"
-            href="fonts/MinionPro-Regular.otf"
+            href="fonts/Alegreya-Regular.ttf"
             as="font"
-            type="font/otf"
+            type="font/ttf"
             crossorigin="anonymous"
         />
     </head>
     <body>
         <nav>
             <div id="nav-left">
-                <img src="red_img.jpg" alt="" width="60" height="60" />
+                <a href="" class="accessible-outline">
+                    <img src="red_img.jpg" alt="" width="60" height="60" />
+                </a>
                 <a href="" class="accessible-outline">Naše služby</a>
                 <a href="" class="accessible-outline">Aktuality</a>
                 <a href="" class="accessible-outline">Kariéra</a>
@@ -40,7 +47,86 @@
 
         <hr />
 
-        <h2>Nabízené služby</h2>
+        <main>
+            <section id="hero">
+                <div class="swiper-container">
+                    <div class="gradient-overlay"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="title_image_1.png" alt="Image 1" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="title_image_1.png" alt="Image 2" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="title_image_1.png" alt="Image 3" />
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination accessible-outline"></div>
+                </div>
+                <div class="title-text">
+                    <h1>Nějaký text o chdcho</h1>
+                    <p>
+                        Chráněné dílny Charity Opava vytváří příležitosti pro
+                        <br />
+                        osoby obtížně hledající uplatnění na trhu práce.
+                    </p>
+                </div>
+            </section>
+
+            <section id="sluzby">
+                <h2>Nabízené služby</h2>
+                <div id="sluzby-grid">
+                    <div class="sluzba-container"></div>
+                    <div class="sluzba-container"></div>
+                    <div class="sluzba-container"></div>
+                    <div class="sluzba-container"></div>
+                    <div class="sluzba-container"></div>
+                    <div class="sluzba-container"></div>
+                    <div class="sluzba-container"></div>
+                    <div class="sluzba-container"></div>
+                    <div class="sluzba-container"></div>
+                </div>
+            </section>
+
+            <section id="partneri">
+                <h2>Partneři</h2>
+                <div class="partner"></div>
+                <div class="partner"></div>
+                <div class="partner"></div>
+                <div class="partner"></div>
+                <div class="partner"></div>
+                <div class="partner"></div>
+                <div class="partner"></div>
+                <div class="partner"></div>
+            </section>
+
+            <section id="nahradni-plneni">
+                <h2>Náhradní plnění</h2>
+            </section>
+
+            <section id="kde-nas-najdete">
+                <h2>Kde nás najdete?</h2>
+                <p>
+                    Náš areál a kanceláře se nachází na adrese Přemyslovců
+                    529/37, Opava.
+                    <a href="" target="_blank" class="accessible-outline"
+                        >Odkaz na Mapy Google</a
+                    >
+                </p>
+                <iframe
+                    src="https://en.frame.mapy.cz/s/fadebepobu"
+                    frameborder="0"
+                    height="600"
+                    width="100%"
+                    title="Adresa chdcho s odkazem na mapy.cz"
+                    tabindex="-1"
+                ></iframe>
+            </section>
+        </main>
+
+        <footer>Chráněné dílny Charity Opava.</footer>
 
         <div class="callout">
             <div class="callout-dash"></div>
@@ -55,5 +141,21 @@
             </div>
             Test
         </div>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".swiper-container", {
+                loop: true,
+                autoplay: {
+                    delay: 10 * 1000, // 10 sec
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: false,
+            });
+        </script>
     </body>
 </html>

@@ -18,20 +18,20 @@
 }
 
 @font-face {
-    font-family: "Minion Pro";
-    src: url("../fonts/MinionPro-Regular.otf");
+    font-family: "Alegreya";
+    src: url("../fonts/Alegreya-Regular.ttf");
     font-weight: 400; /* normal */
 }
 
 @font-face {
-    font-family: "Minion Pro";
-    src: url("../fonts/MinionPro-Bold.otf");
+    font-family: "Alegreya";
+    src: url("../fonts/Alegreya-Bold.ttf");
     font-weight: 700; /* bold */
 }
 
 html,
 body {
-    font-family: "Minion Pro", sans-serif;
+    font-family: "Alegreya", sans-serif;
 }
 
 body {
@@ -46,6 +46,16 @@ h4,
 h5,
 h6 {
     margin-top: 80px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 60px;
+
+    margin: 0;
+    margin-bottom: 20px;
+
+    color: #fff;
 }
 
 h2 {
