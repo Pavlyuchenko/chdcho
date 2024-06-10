@@ -25,6 +25,12 @@
 
 @font-face {
     font-family: "Alegreya";
+    src: url("../fonts/Alegreya-Medium.ttf");
+    font-weight: 600; /* medium */
+}
+
+@font-face {
+    font-family: "Alegreya";
     src: url("../fonts/Alegreya-Bold.ttf");
     font-weight: 700; /* bold */
 }
@@ -32,6 +38,7 @@
 html,
 body {
     font-family: "Alegreya", sans-serif;
+    max-width: 100vw;
 }
 
 body {
@@ -46,6 +53,32 @@ h4,
 h5,
 h6 {
     margin-top: 80px;
+}
+
+@media (max-width: 1000px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 30px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
 }
 
 h1 {
@@ -131,14 +164,14 @@ p {
     margin: 40px 0px;
 }
 .callout-text {
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 24px;
 
     background-color: #f7e1e1;
     border: #dfcbcb 1px solid;
     border-left: 0;
 
-    padding: 10px 15px;
+    padding: 10px 20px;
 
     position: relative;
 
@@ -164,6 +197,8 @@ p {
     display: flex;
     align-items: center;
     gap: 10px;
+
+    margin-bottom: 10px;
 }
 /* Circle Styles */
 .circle {
@@ -188,4 +223,19 @@ p {
     left: 50%;
     transform-origin: center;
     transform: translate(-50%, -50%) rotate(-45deg);
+}
+.success-badge-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* FOOTER */
+footer {
+    background-color: #f4f4f4;
+
+    display: grid;
+    place-items: center stretch;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }

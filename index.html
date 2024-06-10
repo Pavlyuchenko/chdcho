@@ -12,6 +12,7 @@
             href="https://unpkg.com/swiper/swiper-bundle.min.css"
         />
         <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="sluzby.css" />
 
         <link
             rel="preload"
@@ -27,24 +28,70 @@
             type="font/ttf"
             crossorigin="anonymous"
         />
+        <link
+            rel="preload"
+            href="fonts/Alegreya-Medium.ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin="anonymous"
+        />
     </head>
     <body>
         <nav>
             <div id="nav-left">
+                <a href="/" class="accessible-outline">
+                    <img src="red_img.jpg" alt="" width="60" height="60" />
+                </a>
+                <a href="/sluzby.html" class="accessible-outline">
+                    Naše služby
+                </a>
+                <a href="/aktuality.html" class="accessible-outline">
+                    Aktuality
+                </a>
+                <a href="/kariera" class="accessible-outline">Kariéra</a>
+                <a href="/o-nas.html" class="accessible-outline">O nás</a>
+            </div>
+            <div id="nav-right">
+                <a href="/nahradni-plnení.html" class="accessible-outline">
+                    Náhradní plnění
+                </a>
+                <a
+                    href="https://www.kramekprotebe.cz/"
+                    class="button-primary accessible-outline"
+                >
+                    E-shop
+                </a>
+            </div>
+
+            <div id="mobile-nav">
                 <a href="" class="accessible-outline">
                     <img src="red_img.jpg" alt="" width="60" height="60" />
                 </a>
-                <a href="" class="accessible-outline">Naše služby</a>
-                <a href="" class="accessible-outline">Aktuality</a>
-                <a href="" class="accessible-outline">Kariéra</a>
-                <a href="" class="accessible-outline">O nás</a>
+                <div id="mobile-menu">
+                    <input
+                        type="checkbox"
+                        label="menu-toggle"
+                        title="Menu toggle"
+                        id="menu-toggle"
+                        class="menu-toggle"
+                    />
+                    <label for="menu-toggle" id="menu-text"></label>
+                    <label for="menu-toggle" class="hamburger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
             </div>
-            <div id="nav-right">
-                <a href="" class="accessible-outline">Náhradní plnění</a>
-                <a href="" class="button-primary accessible-outline">E-shop</a>
+            <div id="mobile-menu-options">
+                <a href="/nahradni-plneni.html">Náhradní plnění</a>
+                <a href="/sluzby.html">Naše služby</a>
+                <a href="/kariera.html">Kariéra</a>
+                <a href="/o-nas.html">O nás</a>
+                <a href="https://www.kramekprotebe.cz/">E-shop</a>
+                <p>Skrýt menu</p>
             </div>
         </nav>
-
         <hr />
 
         <main>
@@ -56,10 +103,13 @@
                             <img src="title_image_1.png" alt="Image 1" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="title_image_1.png" alt="Image 2" />
+                            <img src="fotky/budova2.jpg" alt="Image 2" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="title_image_1.png" alt="Image 3" />
+                            <img
+                                src="fotky/rozebirka/rozebirka8.jpg"
+                                alt="Image 3"
+                            />
                         </div>
                     </div>
                     <!-- Add Pagination -->
@@ -78,32 +128,275 @@
             <section id="sluzby">
                 <h2>Nabízené služby</h2>
                 <div id="sluzby-grid">
-                    <div class="sluzba-container"></div>
-                    <div class="sluzba-container"></div>
-                    <div class="sluzba-container"></div>
-                    <div class="sluzba-container"></div>
-                    <div class="sluzba-container"></div>
-                    <div class="sluzba-container"></div>
-                    <div class="sluzba-container"></div>
-                    <div class="sluzba-container"></div>
-                    <div class="sluzba-container"></div>
+                    <a
+                        href="sluzby/elektroodpad.html"
+                        class="sluzba-container accessible-outline"
+                    >
+                        <img
+                            src="gradient_sluzba.png"
+                            alt=""
+                            class="gradient-sluzba"
+                        />
+                        <img src="hlavni_fotky/elektro.jpg" alt="" />
+
+                        <div class="sluzba-text">
+                            <h3>Likvidace<br />elektroodpadu</h3>
+                            <p>
+                                Kompletujeme výrobky s ručním nářadím, vrtačkou,
+                                lisy a vysokozdvižnými vozíky.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="" class="sluzba-container accessible-outline">
+                        <img
+                            src="gradient_sluzba.png"
+                            alt=""
+                            class="gradient-sluzba"
+                        />
+                        <img src="hlavni_fotky/kompletace.jpg" alt="" />
+
+                        <div class="sluzba-text">
+                            <h3>Kompletační<br />práce</h3>
+                            <p>
+                                Kompletujeme výrobky s ručním nářadím, vrtačkou,
+                                lisy a vysokozdvižnými vozíky.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="" class="sluzba-container accessible-outline">
+                        <img
+                            src="gradient_sluzba.png"
+                            alt=""
+                            class="gradient-sluzba"
+                        />
+                        <img src="hlavni_fotky/potisk.jpg" alt="" />
+
+                        <div class="sluzba-text">
+                            <h3>Potisk</h3>
+                            <p>
+                                Kompletujeme výrobky s ručním nářadím, vrtačkou,
+                                lisy a vysokozdvižnými vozíky.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="" class="sluzba-container accessible-outline">
+                        <img
+                            src="gradient_sluzba.png"
+                            alt=""
+                            class="gradient-sluzba"
+                        />
+                        <img src="hlavni_fotky/laser.jpg" alt="" />
+
+                        <div class="sluzba-text">
+                            <h3>Laser</h3>
+                            <p>
+                                Kompletujeme výrobky s ručním nářadím, vrtačkou,
+                                lisy a vysokozdvižnými vozíky.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="" class="sluzba-container accessible-outline">
+                        <img
+                            src="gradient_sluzba.png"
+                            alt=""
+                            class="gradient-sluzba"
+                        />
+                        <img src="hlavni_fotky/siti.jpg" alt="" />
+
+                        <div class="sluzba-text">
+                            <h3>Šicí dílna</h3>
+                            <p>
+                                Kompletujeme výrobky s ručním nářadím, vrtačkou,
+                                lisy a vysokozdvižnými vozíky.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="" class="sluzba-container accessible-outline">
+                        <img
+                            src="gradient_sluzba.png"
+                            alt=""
+                            class="gradient-sluzba"
+                        />
+                        <img src="hlavni_fotky/keramika.jpg" alt="" />
+
+                        <div class="sluzba-text">
+                            <h3>Keramika</h3>
+                            <p>
+                                Kompletujeme výrobky s ručním nářadím, vrtačkou,
+                                lisy a vysokozdvižnými vozíky.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="" class="sluzba-container accessible-outline">
+                        <img
+                            src="gradient_sluzba.png"
+                            alt=""
+                            class="gradient-sluzba"
+                        />
+                        <img src="hlavni_fotky/vysivky.jpg" alt="" />
+
+                        <div class="sluzba-text">
+                            <h3>Výšivky</h3>
+                            <p>
+                                Kompletujeme výrobky s ručním nářadím, vrtačkou,
+                                lisy a vysokozdvižnými vozíky.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="" class="sluzba-container accessible-outline">
+                        <img
+                            src="gradient_sluzba.png"
+                            alt=""
+                            class="gradient-sluzba"
+                        />
+                        <img src="hlavni_fotky/skartace.jpg" alt="" />
+
+                        <div class="sluzba-text">
+                            <h3>Skartace</h3>
+                            <p>
+                                Kompletujeme výrobky s ručním nářadím, vrtačkou,
+                                lisy a vysokozdvižnými vozíky.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="" class="sluzba-container accessible-outline">
+                        <img
+                            src="gradient_sluzba.png"
+                            alt=""
+                            class="gradient-sluzba"
+                        />
+                        <img src="hlavni_fotky/darkove4.jpg" alt="" />
+
+                        <div class="sluzba-text">
+                            <h3>Dárkové sady</h3>
+                            <p>
+                                Kompletujeme výrobky s ručním nářadím, vrtačkou,
+                                lisy a vysokozdvižnými vozíky.
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </section>
 
             <section id="partneri">
                 <h2>Partneři</h2>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
-                <div class="partner"></div>
+                <div id="partneri-grid">
+                    <div class="partner">
+                        <img src="fotky/bkopava.png" alt="" />
+                        <h3>BK Opava</h3>
+                        <a
+                            href=""
+                            rel="nofollow"
+                            class="accessible-outline"
+                            target="_blank"
+                        >
+                            www.bkopava.cz
+                        </a>
+                    </div>
+                    <div class="partner">
+                        <img src="fotky/bkopava.png" alt="" />
+                        <h3>BK Opava</h3>
+                        <a
+                            href=""
+                            rel="nofollow"
+                            class="accessible-outline"
+                            target="_blank"
+                        >
+                            www.bkopava.cz
+                        </a>
+                    </div>
+                    <div class="partner">
+                        <img src="fotky/bkopava.png" alt="" />
+                        <h3>BK Opava</h3>
+                        <a
+                            href=""
+                            rel="nofollow"
+                            class="accessible-outline"
+                            target="_blank"
+                        >
+                            www.bkopava.cz
+                        </a>
+                    </div>
+                    <div class="partner">
+                        <img src="fotky/bkopava.png" alt="" />
+                        <h3>BK Opava</h3>
+                        <a
+                            href=""
+                            rel="nofollow"
+                            class="accessible-outline"
+                            target="_blank"
+                        >
+                            www.bkopava.cz
+                        </a>
+                    </div>
+                    <div class="partner">
+                        <img src="fotky/bkopava.png" alt="" />
+                        <h3>BK Opava</h3>
+                        <a
+                            href=""
+                            rel="nofollow"
+                            class="accessible-outline"
+                            target="_blank"
+                        >
+                            www.bkopava.cz
+                        </a>
+                    </div>
+                    <div class="partner">
+                        <img src="fotky/bkopava.png" alt="" />
+                        <h3>BK Opava</h3>
+                        <a
+                            href=""
+                            rel="nofollow"
+                            class="accessible-outline"
+                            target="_blank"
+                        >
+                            www.bkopava.cz
+                        </a>
+                    </div>
+                    <div class="partner">
+                        <img src="fotky/bkopava.png" alt="" />
+                        <h3>BK Opava</h3>
+                        <a
+                            href=""
+                            rel="nofollow"
+                            class="accessible-outline"
+                            target="_blank"
+                        >
+                            www.bkopava.cz
+                        </a>
+                    </div>
+                    <div class="partner">
+                        <img src="fotky/bkopava.png" alt="" />
+                        <h3>BK Opava</h3>
+                        <a
+                            href=""
+                            rel="nofollow"
+                            class="accessible-outline"
+                            target="_blank"
+                        >
+                            www.bkopava.cz
+                        </a>
+                    </div>
+                </div>
             </section>
 
             <section id="nahradni-plneni">
                 <h2>Náhradní plnění</h2>
+            </section>
+
+            <section id="statistiky">
+                <div class="record">
+                    <h3>200</h3>
+                    <p>zaměstnanců</p>
+                </div>
+                <div class="record">
+                    <h3>90 m2</h3>
+                    <p>výrobní haly</p>
+                </div>
+                <div class="record">
+                    <h3>100</h3>
+                    <p>zakázek</p>
+                </div>
             </section>
 
             <section id="kde-nas-najdete">
@@ -123,24 +416,31 @@
                     title="Adresa chdcho s odkazem na mapy.cz"
                     tabindex="-1"
                 ></iframe>
+                <!-- <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2567.508913585676!2d17.85330329330171!3d49.94555529801572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713d7eeed76e1ef%3A0xc7b1324b7f1e2776!2zQ2hyw6FuxJtuw6kgZMOtbG55IENoYXJpdHkgT3BhdmE!5e0!3m2!1sen!2scz!4v1717927564759!5m2!1sen!2scz"
+                    width="100%"
+                    height="600"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Adresa chdcho s odkazem na mapy.cz"
+                    tabindex="-1"
+                ></iframe> -->
             </section>
         </main>
 
-        <footer>Chráněné dílny Charity Opava.</footer>
-
-        <div class="callout">
-            <div class="callout-dash"></div>
-            <div class="callout-text">
-                Charita Opava je certifikována dle ISO 9001 a 14001.
+        <footer>
+            <div>
+                <h4>Provozovatel</h4>
+                <p>Chráněné dílny Charity Opava</p>
+                <p>Adresa 000</p>
+                <p>747 05 Opava</p>
+                <p>Telefon +420 000 000 000</p>
+                <p>chdcho@gmail.com</p>
+                <p>www.cdcho.cz</p>
             </div>
-        </div>
-
-        <div class="success-badge">
-            <div class="circle">
-                <div class="tick"></div>
-            </div>
-            Test
-        </div>
+            Chráněné dílny Charity Opava.
+        </footer>
 
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>

@@ -1,10 +1,19 @@
 nav {
+    width: 100%;
+    box-sizing: border-box;
+
+    z-index: 100;
+
+    background-color: white;
+
     height: 80px; /* TODO: delete later probably */
-    margin: 10px 50px;
+    padding: 10px 50px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    font-weight: 600;
 }
 
 #nav-left {
@@ -37,7 +46,172 @@ nav a:hover {
 
 hr {
     border: 0;
-    border-top: 1px solid #f0f0f0;
+    border-top: 2px solid #bbb;
     width: 100%;
     margin: 0;
+}
+
+/* MOBILE */
+#mobile-nav {
+    display: none;
+
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+#mobile-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    position: relative;
+
+    user-select: none;
+    cursor: pointer;
+}
+#mobile-menu label {
+    cursor: pointer;
+}
+#menu-text {
+    font-size: 30px;
+    font-weight: 700;
+
+    position: relative;
+}
+/* make the clickable area bigger */
+#menu-text::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 200%;
+    height: 100px;
+}
+#menu-text::after {
+    content: "Menu";
+}
+.menu-toggle:checked ~ #menu-text::after {
+    content: "Zavřít";
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hamburger-menu span {
+    display: inline-block;
+    width: 35px;
+    height: 4px;
+    background-color: black;
+
+    transition: 0.2s;
+}
+
+/* Styles to rotate the spans and form the X icon */
+.menu-toggle:checked ~ .hamburger-menu span:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 8px);
+}
+
+.menu-toggle:checked ~ .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked ~ .hamburger-menu span:nth-child(3) {
+    transform: rotate(-45deg) translate(9px, -8px);
+}
+
+/* Hidden checkbox */
+.menu-toggle {
+    display: none;
+}
+
+#mobile-menu-options {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 30px;
+
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+
+    z-index: 100;
+    background-color: var(--red);
+    color: #fff;
+
+    width: 100%;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 5px solid #fff;
+}
+#mobile-menu-options a,
+#mobile-menu-options p {
+    color: #fff;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    text-decoration: underline;
+
+    position: relative;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+#mobile-menu-options a:hover {
+    color: #ddd;
+}
+#mobile-menu-options a::before {
+    content: "";
+    position: absolute;
+
+    width: 40px;
+    height: 4px;
+
+    background-color: white;
+
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 1000px) {
+    nav {
+        padding: 10px 15px;
+
+        position: fixed;
+
+        height: 60px;
+    }
+
+    #mobile-nav:has(#menu-toggle:checked) + #mobile-menu-options {
+        display: flex;
+        flex-direction: column; /* Ensure the menu items stack vertically */
+    }
+    hr {
+        position: fixed;
+        top: 60px;
+
+        border-top: 2px solid #000;
+
+        z-index: 100;
+    }
+
+    #mobile-nav {
+        display: flex;
+    }
+    #nav-left,
+    #nav-right {
+        display: none;
+    }
 }

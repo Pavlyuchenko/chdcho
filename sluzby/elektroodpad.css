@@ -1,0 +1,179 @@
+header {
+    width: 100%;
+
+    position: relative;
+}
+
+header #title-image {
+    width: 100%;
+}
+
+header #gradient-image {
+    width: 100%;
+    position: absolute;
+
+    left: 0;
+    top: 0;
+}
+
+header h1 {
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+
+    font-size: 68px;
+}
+
+header a {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+}
+
+header a::before {
+    content: "";
+    display: inline-block;
+
+    width: 38px;
+    height: 6px;
+    margin-right: 18px;
+
+    background-color: var(--red);
+
+    vertical-align: middle;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN */
+#sluzby-main {
+    display: flex;
+    flex-wrap: nowrap;
+
+    width: 100%;
+}
+#sluzby-main h2 {
+    color: #000;
+    position: relative;
+
+    width: fit-content;
+}
+#sluzby-main h2::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 38px;
+    height: 6px;
+
+    background-color: var(--red);
+
+    vertical-align: middle;
+}
+
+section {
+    flex: 2;
+
+    padding: 20px 50px;
+}
+
+/* ASIDE */
+aside {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-sizing: border-box;
+    max-width: 550px;
+    min-width: 500px;
+
+    background-color: #fff;
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.18);
+
+    padding: 40px;
+    margin-right: 50px;
+
+    margin-top: -250px;
+
+    z-index: 100;
+}
+
+aside h2 {
+    margin-top: 0;
+}
+aside h2::before {
+    left: 50% !important;
+    transform: translateX(-50%);
+}
+
+aside input {
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: #f6f6f6;
+    border: 1px solid #bdbdbd;
+
+    font-size: 24px;
+    font-family: "Alegreya", sans-serif;
+
+    padding: 5px;
+}
+aside textarea {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    resize: vertical;
+
+    background-color: #f6f6f6;
+    border: 1px solid #bdbdbd;
+
+    font-size: 24px;
+    font-family: "Alegreya", sans-serif;
+
+    padding: 5px;
+}
+
+aside label {
+    width: 100%;
+
+    display: block;
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+    color: #000;
+}
+
+aside button {
+    width: 100%;
+
+    background-color: var(--red);
+    color: #fff;
+    font-size: 28px;
+    font-family: "Alegreya";
+    font-weight: 600;
+
+    border: none;
+
+    padding: 10px;
+    margin-top: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s letter-spacing;
+}
+
+aside button:hover {
+    text-decoration: underline;
+
+    letter-spacing: 0.5px;
+}
