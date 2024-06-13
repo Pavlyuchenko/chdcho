@@ -1,0 +1,10 @@
+#kalkulacka {
+    background-color: var(--red);
+    color: #fff;
+}
+
+#kalkulacka input {
+    background-color: #fff;
+    color: #000;
+    display: block;
+}
