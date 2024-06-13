@@ -64,8 +64,8 @@
             </div>
 
             <div id="mobile-nav">
-                <a href="" class="accessible-outline">
-                    <img src="red_img.jpg" alt="" width="60" height="60" />
+                <a href="/index.html" class="accessible-outline">
+                    <img src="../red_img.jpg" alt="" width="60" height="60" />
                 </a>
                 <div id="mobile-menu">
                     <input
@@ -93,6 +93,8 @@
             </div>
         </nav>
         <hr />
+
+        <div id="nav-alias"></div>
 
         <header>
             <img src="imgs/elektro5.png" alt="" id="title-image" />
@@ -337,26 +339,6 @@
                         lightbox.style.display = "none";
                     }
                 });
-
-                function adjustImageSize() {
-                    const viewportWidth = window.innerWidth * 0.85;
-                    const viewportHeight = window.innerHeight * 0.85;
-                    const aspectRatio =
-                        lightboxImg.naturalWidth / lightboxImg.naturalHeight;
-
-                    if (aspectRatio * viewportHeight > viewportWidth) {
-                        lightboxImg.style.width = viewportWidth + "px";
-                        lightboxImg.style.height =
-                            viewportWidth / aspectRatio + "px";
-                    } else {
-                        lightboxImg.style.width =
-                            viewportHeight * aspectRatio + "px";
-                        lightboxImg.style.height = viewportHeight + "px";
-                    }
-                }
-
-                window.addEventListener("resize", adjustImageSize);
-                adjustImageSize(); // Call the function initially to set the correct size
             });
         </script>
     </body>

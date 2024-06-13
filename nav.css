@@ -185,6 +185,10 @@ hr {
     transform: translateX(-50%);
 }
 
+#nav-alias {
+    display: none;
+}
+
 @media (max-width: 1000px) {
     nav {
         padding: 10px 15px;
@@ -192,6 +196,10 @@ hr {
         position: fixed;
 
         height: 60px;
+    }
+    #nav-alias {
+        height: 60px;
+        display: flex;
     }
 
     #mobile-nav:has(#menu-toggle:checked) + #mobile-menu-options {

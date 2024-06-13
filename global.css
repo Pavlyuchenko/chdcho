@@ -97,6 +97,15 @@ h2 {
 
     color: var(--red);
 }
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+}
 /* a red dash in front */
 h2::before {
     content: "";
@@ -154,6 +163,11 @@ h2::before {
 p {
     font-size: 24px;
 }
+@media (max-width: 1000px) {
+    p {
+        font-size: 22px;
+    }
+}
 
 /* CALLOUT */
 .callout {
@@ -187,6 +201,15 @@ p {
     width: 8px;
 
     background-color: var(--red);
+}
+
+@media (max-width: 1000px) {
+    .callout-text {
+        font-size: 22px;
+    }
+    .callout {
+        margin: 20px 0px;
+    }
 }
 
 /* Success Badge */
@@ -228,6 +251,15 @@ p {
     display: grid;
 
     grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 1000px) {
+    .success-badge-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .success-badge {
+        font-size: 22px;
+    }
 }
 
 /* FOOTER */

@@ -104,6 +104,9 @@
     visibility: visible;
 }
 @media (max-width: 1000px) {
+    #sluzby {
+        margin: 0 15px;
+    }
     #sluzby-grid {
         grid-template-columns: repeat(1, 1fr);
     }
