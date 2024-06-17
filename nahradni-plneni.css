@@ -155,3 +155,9 @@ input[type="number"]:read-only {
 #vice-info {
     display: none;
 }
+
+@media (max-width: 1000px) {
+    #kalk-druhy-krok .fake-input {
+        font-size: 40px;
+    }
+}
