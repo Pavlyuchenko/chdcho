@@ -40,6 +40,9 @@ h1 {
     #hero {
         flex-direction: column;
     }
+    #hero p {
+        font-size: 24px;
+    }
     main {
         padding-left: 0;
     }
@@ -54,6 +57,8 @@ h1 {
     gap: 200px;
 
     padding-right: 100px;
+    padding-right: 50px;
+    gap: 50px;
 }
 
 main h3 {
@@ -95,10 +100,6 @@ main h3::before {
         font-size: 24px;
     }
 }
-.kariera-bonus {
-    padding-right: 50px;
-    gap: 50px;
-}
 
 @media (max-width: 1000px) {
     .kariera-bonus {
@@ -106,7 +107,9 @@ main h3::before {
         gap: 0;
         padding-right: 0;
     }
-
+    .kariera-bonus p {
+        font-size: 22px;
+    }
     main {
         margin: 0 15px;
     }
@@ -174,7 +177,7 @@ main h3::before {
         margin-top: 50px;
     }
     #co-nabizime .success-badge {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     #ohlasy {
@@ -183,8 +186,12 @@ main h3::before {
 
         margin-top: 50px;
     }
+    #ohlasy p {
+        font-size: 24px;
+    }
+
     #zamestnanci {
-        padding: 30px 40px;
+        padding: 15px 25px;
     }
     .zamestnanec-info-wrapper {
         gap: 20px;
