@@ -120,6 +120,9 @@ main h3::before {
     h1 {
         font-size: 40px;
     }
+    #bonusy {
+        gap: 10px;
+    }
 }
 
 #co-nabizime {
