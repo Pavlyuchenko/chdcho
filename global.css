@@ -52,10 +52,7 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
     margin-top: 80px;
 }
 
@@ -224,13 +221,11 @@ p {
     display: flex;
     align-items: center;
     gap: 10px;
-
-    margin-bottom: 10px;
 }
 /* Circle Styles */
 .circle {
-    width: 24px;
-    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
     background-color: var(--red);
     border-radius: 50%;
     display: flex;
@@ -255,6 +250,7 @@ p {
     display: grid;
 
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
 }
 @media (max-width: 1000px) {
     .success-badge-container {
