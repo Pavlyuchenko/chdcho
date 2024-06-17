@@ -89,98 +89,252 @@
         <main>
             <div id="kalkulacka">
                 <h3>Kalkulačka náhradního plnění</h3>
-                <b>Zadejte počet Vašich zaměstnanců:</b>
-                <input
-                    type="number"
-                    name="pocet-zamestnancu"
-                    id="pocet-zamestnancu"
-                />
-                <b
-                    >Zadejte počet Vašich zaměstnanců se zdravotním
-                    postižením:</b
-                >
-                <input
-                    type="number"
-                    name="pocet-zamestnancu-zdr-post"
-                    id="pocet-zamestnancu-zdr-post"
-                />
+                <p id="kolik-usetrite">Kolik ušetříte na náhradním plnění?</p>
 
-                <b>1. Možnost podle zákona</b>
-                <p>Počet zaměstnaných se zdravotním postižením:</p>
-                <input
-                    type="number"
-                    name="zamestranci-zdr-post"
-                    id="zamestranci-zdr-post"
-                />
+                <div id="kalk-prvni-krok">
+                    <div id="kalk-prvni-krok-text">
+                        <h4>Informace o Vás</h4>
+                        <p>Zadejte informace o počtu Vašich zaměstnanců.</p>
+                    </div>
+                    <div id="kalk-prvni-krok-cisla">
+                        <div>
+                            <label for="pocet-zamestnancu">Celkový počet</label>
+                            <input
+                                type="number"
+                                name="pocet-zamestnancu"
+                                id="pocet-zamestnancu"
+                                class="accessible-outline"
+                                min="0"
+                                max="10000"
+                                placeholder="25"
+                            />
+                        </div>
+                        <div>
+                            <label for="pocet-zamestnancu-zdr-post">
+                                Z toho OZP
+                            </label>
+                            <input
+                                type="number"
+                                name="pocet-zamestnancu-zdr-post"
+                                id="pocet-zamestnancu-zdr-post"
+                                class="accessible-outline"
+                                min="0"
+                                placeholder="0"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div id="kalk-druhy-krok">
+                    <p>S námi ročně ušetříte</p>
+                    <div class="fake-input">
+                        <span id="usetrite-castka"></span> Kč
+                    </div>
+                    <p>které byste jinak museli odvést do státní pokladny.</p>
 
-                <b>2. Možnost podle zákona</b>
-                <p>Odvod do státní pokladny:</p>
-                <input type="number" name="odvod" id="odvod" />
+                    <p
+                        id="zobrazit-vice"
+                        class="accessible-outline"
+                        tabindex="0"
+                    >
+                        Zobrazit více ⬇️
+                    </p>
+                </div>
+                <div id="kalk-druhy-krok-alternative">
+                    <p>
+                        Pokud zaměstnáváte méně než 25 lidí, náhradní plnění se
+                        Vás netýká
+                    </p>
+                </div>
 
-                <b>3. Možnost podle zákona</b>
-                <p>Cena za náhradní plnění:</p>
-                <input type="number" name="cena-nahr-pln" id="cena-nahr-pln" />
+                <div id="vice-info">
+                    <p>
+                        Náhradní plnění se týká všech firem, které zaměstnávají
+                        více než 25 zaměstnanců.
+                    </p>
+                    <p>
+                        Ze zákona existují 3 možnosti, jak náhradní plnění
+                        řešit:
+                    </p>
 
-                <b>Náhradním plněním ušetříte</b>
-                <input type="number" name="usetrite" id="usetrite" />
+                    <p>
+                        1. Zaměstnat 4 % osob s OZP z celkového počtu
+                        zaměstnanců. Ve Vašem případě je třeba zaměstnat:
+                    </p>
+                    <div class="fake-input">
+                        <span id="zamestranci-zdr-post-span"></span> OZP
+                    </div>
+
+                    <p>
+                        2. Odvést peníze do státní pokladny v hodnotě 2,5 x
+                        průměrné roční mzdy místo každé nezaměstnané OZP osoby.
+                        Ve Vašem případě to činí:
+                    </p>
+                    <div class="fake-input">
+                        <span id="odvod-span"></span> Kč
+                    </div>
+
+                    <p>
+                        3. Odběr zboží nebo služeb ve výši 7 x průměrné roční
+                        mzdy místo každé nezaměstnané OZP osoby:
+                    </p>
+                    <div class="fake-input">
+                        <span id="cena-nahr-pln-span"></span> Kč
+                    </div>
+                </div>
             </div>
         </main>
 
         <script>
-            // get all input types into int variables
+            const prumernaMzda = 43941;
+
+            // user input
             const pocetZamestnancu =
                 document.getElementById("pocet-zamestnancu");
             const pocetZamestnancuZdrPos = document.getElementById(
                 "pocet-zamestnancu-zdr-post"
             );
 
+            // kalkulator output
+            const usetriteCastka = document.getElementById("usetrite-castka");
+
             const zamestranciZdrPost = document.getElementById(
-                "zamestranci-zdr-post"
+                "zamestranci-zdr-post-span"
             );
-            const odvod = document.getElementById("odvod");
-            const cenaNahrPln = document.getElementById("cena-nahr-pln");
-            const usetrite = document.getElementById("usetrite");
+            const odvod = document.getElementById("odvod-span");
+            const cenaNahrPln = document.getElementById("cena-nahr-pln-span");
 
-            const prumernaMzda = 42427; //43941;
+            // for addevents
+            const druhyKrokDiv = document.getElementById("kalk-druhy-krok");
+            const druhyKrokDivAlt = document.getElementById(
+                "kalk-druhy-krok-alternative"
+            );
 
-            // on pocetZamestnancu change (addeventlistener)
-            pocetZamestnancu.addEventListener("change", () => {
-                // get all input values
+            function updateValues() {
+                // get user input
                 let pocetZamestnancuValue = parseInt(pocetZamestnancu.value);
                 let pocetZamestnancuZdrPosValue = parseInt(
                     pocetZamestnancuZdrPos.value
                 );
-                // if pocetZamestnancuZdrPosValue is NaN set it to 0
+
+                // prevent negation and string input
                 if (isNaN(pocetZamestnancuZdrPosValue)) {
                     pocetZamestnancuZdrPosValue = 0;
                 }
 
+                // if eligible for nahradni plneni
                 if (pocetZamestnancuValue >= 25) {
+                    // calculate ratio nonOZP : OZP
                     let pocetZamestnancuSeZdravPost =
                         Math.round(pocetZamestnancuValue / 25) -
                         pocetZamestnancuZdrPosValue;
 
-                    zamestranciZdrPost.value = pocetZamestnancuSeZdravPost;
+                    // prevent negation
+                    pocetZamestnancuSeZdravPost = Math.max(
+                        0,
+                        pocetZamestnancuSeZdravPost
+                    );
 
-                    odvod.value = Math.round(
+                    usetriteCastka.innerHTML = Math.round(
                         pocetZamestnancuSeZdravPost * prumernaMzda * 2.5
-                    );
+                    )
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
-                    cenaNahrPln.value = Math.round(
+                    zamestranciZdrPost.innerHTML = pocetZamestnancuSeZdravPost;
+
+                    odvod.innerHTML = Math.round(
+                        pocetZamestnancuSeZdravPost * prumernaMzda * 2.5
+                    )
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+                    cenaNahrPln.innerHTML = Math.round(
                         pocetZamestnancuSeZdravPost * prumernaMzda * 7
-                    );
+                    )
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+                    druhyKrokDiv.style.display = "flex";
+                    druhyKrokDivAlt.style.display = "none";
+                } else {
+                    zamestranciZdrPost.innerHTML = 0;
+                    odvod.innerHTML = 0;
+                    cenaNahrPln.innerHTML = 0;
+
+                    usetriteCastka.innerHTML = "0";
+
+                    druhyKrokDiv.style.display = "none";
+
+                    if (pocetZamestnancuValue > 0) {
+                        druhyKrokDivAlt.style.display = "block";
+                    } else {
+                        druhyKrokDivAlt.style.display = "none";
+                    }
                 }
+            }
 
-                /* // calculate usetrite value
-                const usetriteValue =
-                    pocetZamestnancuValue *
-                        zamestranciZdrPostValue *
-                        odvodValue -
-                    cenaNahrPlnValue;
-
-                // set usetrite value
-                usetrite.value = usetriteValue; */
+            // on pocetZamestnancu change (addeventlistener)
+            pocetZamestnancu.addEventListener("keyup", () => {
+                updateValues();
             });
+            pocetZamestnancu.addEventListener("change", () => {
+                updateValues();
+            });
+
+            // on pocetZamestnancuZdrPos change (addeventlistener)
+            pocetZamestnancuZdrPos.addEventListener("keyup", () => {
+                updateValues();
+            });
+            pocetZamestnancuZdrPos.addEventListener("change", () => {
+                updateValues();
+            });
+
+            let visible = false;
+
+            document
+                .getElementById("zobrazit-vice")
+                .addEventListener("click", () => {
+                    if (visible) {
+                        document.getElementById("vice-info").style.display =
+                            "none";
+                        visible = false;
+
+                        document.getElementById("zobrazit-vice").innerHTML =
+                            "Zobrazit více ⬇️";
+                    } else {
+                        document.getElementById("vice-info").style.display =
+                            "block";
+                        visible = true;
+
+                        document.getElementById("vice-info").scrollIntoView({
+                            behavior: "smooth",
+                        });
+
+                        document.getElementById("zobrazit-vice").innerHTML =
+                            "Skrýt ⬆️";
+                    }
+                });
+            document
+                .getElementById("zobrazit-vice")
+                .addEventListener("keydown", (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        if (visible) {
+                            document.getElementById("vice-info").style.display =
+                                "none";
+                            visible = false;
+
+                            document.getElementById("zobrazit-vice").innerHTML =
+                                "Zobrazit více ⬇️";
+                        } else {
+                            document.getElementById("vice-info").style.display =
+                                "block";
+                            visible = true;
+
+                            document.getElementById("zobrazit-vice").innerHTML =
+                                "Skrýt ⬆️";
+                        }
+                    }
+                });
         </script>
     </body>
 </html>
