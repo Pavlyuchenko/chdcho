@@ -13,7 +13,13 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    font-weight: 600;
+    font-weight: 500;
+}
+
+#nav-active {
+    color: var(--red);
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 #nav-logo {
@@ -25,7 +31,7 @@ nav {
 #nav-left {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
 }
 
 nav a {
@@ -38,6 +44,8 @@ nav a {
     z-index: 1;
     padding: 0.75em;
     margin: -0.75em;
+
+    min-width: fit-content;
 }
 nav a:hover {
     color: var(--red);
@@ -47,7 +55,7 @@ nav a:hover {
 #nav-right {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
 }
 
 hr {
@@ -57,6 +65,71 @@ hr {
     margin: 0;
 }
 
+/*
+ * this is one clickalbe button in the nav
+ * I want it to have an arrow to the right of it
+ * Which on hover displays additional content
+ */
+#o-nas-nav {
+    position: relative;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0;
+    margin: 0;
+
+    user-select: none;
+}
+
+#o-nas-nav::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 5px);
+    transform: rotate(90deg);
+
+    width: 8px;
+
+    border: 8px solid transparent;
+    border-left-color: #000;
+}
+
+.dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    min-width: 200px;
+    border-radius: 5px;
+    border: 1px solid #dde;
+
+    display: none;
+    flex-direction: column;
+}
+
+.dropdown a {
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 15px 10px;
+}
+
+.dropdown a:hover {
+    background-color: #eee;
+}
+
+/* .nav-item:hover .dropdown {
+    display: flex;
+} */
 /* MOBILE */
 #mobile-nav {
     display: none;

@@ -56,6 +56,12 @@
                         id="nav-logo"
                     />
                 </a>
+                <a
+                    href="index.html"
+                    class="accessible-outline active"
+                    id="nav-active"
+                    >Domů</a
+                >
                 <a href="sluzby.html" class="accessible-outline">
                     Naše služby
                 </a>
@@ -63,11 +69,35 @@
                     Aktuality
                 </a> -->
                 <a href="kariera.html" class="accessible-outline">Kariéra</a>
-                <a href="o-nas.html" class="accessible-outline">O nás</a>
-            </div>
-            <div id="nav-right">
+                <a href="kontakt.html" class="accessible-outline">Kontakt</a>
                 <a href="nahradni-plneni.html" class="accessible-outline">
                     Náhradní plnění
+                </a>
+                <div id="o-nas-nav" class="nav-item">
+                    <a href="o-nas.html" class="accessible-outline">O nás</a>
+                    <div class="dropdown">
+                        <a href="about-us.html" class="accessible-outline"
+                            >About Us</a
+                        >
+                        <a href="team.html" class="accessible-outline"
+                            >Our Team</a
+                        >
+                        <a href="history.html" class="accessible-outline"
+                            >History</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div id="nav-right">
+                <a href="opravarna.html" class="accessible-outline">
+                    Opravárna
+                </a>
+                <a
+                    href="https://www.charitaopava.cz/"
+                    class="accessible-outline"
+                    target="_blank"
+                >
+                    Charita Opava
                 </a>
                 <a
                     href="https://www.kramekprotebe.cz/"
@@ -156,7 +186,11 @@
                             alt=""
                             class="gradient-sluzba"
                         />
-                        <img src="hlavni_fotky/elektro.jpg" alt="" />
+                        <img
+                            src="hlavni_fotky/elektro.jpg"
+                            alt=""
+                            class="sluzba-fotka"
+                        />
 
                         <div class="sluzba-text">
                             <h3>Likvidace<br />elektroodpadu</h3>
@@ -172,7 +206,11 @@
                             alt=""
                             class="gradient-sluzba"
                         />
-                        <img src="hlavni_fotky/kompletace.jpg" alt="" />
+                        <img
+                            src="hlavni_fotky/kompletace.jpg"
+                            alt=""
+                            class="sluzba-fotka"
+                        />
 
                         <div class="sluzba-text">
                             <h3>Kompletační<br />práce</h3>
@@ -188,55 +226,11 @@
                             alt=""
                             class="gradient-sluzba"
                         />
-                        <img src="hlavni_fotky/potisk.jpg" alt="" />
-
-                        <div class="sluzba-text">
-                            <h3>Potisk</h3>
-                            <p>
-                                Tiskneme na trička, mikiny, tašky a další.
-                                Zabýváme se zakázkovou výrobou od 1 ks.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="" class="sluzba-container accessible-outline">
                         <img
-                            src="gradient_sluzba.png"
+                            src="hlavni_fotky/keramika.jpg"
                             alt=""
-                            class="gradient-sluzba"
+                            class="sluzba-fotka"
                         />
-                        <img src="hlavni_fotky/laser.jpg" alt="" />
-
-                        <div class="sluzba-text">
-                            <h3>Laser</h3>
-                            <p>
-                                Řežeme a gravírujeme na CO2 laseru. Zabýváme se
-                                zakázkovou výrobou.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="" class="sluzba-container accessible-outline">
-                        <img
-                            src="gradient_sluzba.png"
-                            alt=""
-                            class="gradient-sluzba"
-                        />
-                        <img src="hlavni_fotky/siti.jpg" alt="" />
-
-                        <div class="sluzba-text">
-                            <h3>Šicí dílna</h3>
-                            <p>
-                                Šijeme polštáře, zástěry, ubrusy, dekorace.
-                                Zabýváme se zakázkovou výrobou.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="" class="sluzba-container accessible-outline">
-                        <img
-                            src="gradient_sluzba.png"
-                            alt=""
-                            class="gradient-sluzba"
-                        />
-                        <img src="hlavni_fotky/keramika.jpg" alt="" />
 
                         <div class="sluzba-text">
                             <h3>Keramika</h3>
@@ -252,7 +246,11 @@
                             alt=""
                             class="gradient-sluzba"
                         />
-                        <img src="hlavni_fotky/vysivky.jpg" alt="" />
+                        <img
+                            src="hlavni_fotky/vysivky.jpg"
+                            alt=""
+                            class="sluzba-fotka"
+                        />
 
                         <div class="sluzba-text">
                             <h3>Výšivky</h3>
@@ -268,7 +266,73 @@
                             alt=""
                             class="gradient-sluzba"
                         />
-                        <img src="hlavni_fotky/skartace.jpg" alt="" />
+                        <img
+                            src="hlavni_fotky/siti.jpg"
+                            alt=""
+                            class="sluzba-fotka"
+                        />
+
+                        <div class="sluzba-text">
+                            <h3>Šicí dílna</h3>
+                            <p>
+                                Šijeme polštáře, zástěry, ubrusy, dekorace.
+                                Zabýváme se zakázkovou výrobou.
+                            </p>
+                        </div>
+                    </a>
+
+                    <a href="" class="sluzba-container accessible-outline">
+                        <img
+                            src="gradient_sluzba.png"
+                            alt=""
+                            class="gradient-sluzba"
+                        />
+                        <img
+                            src="hlavni_fotky/potisk.jpg"
+                            alt=""
+                            class="sluzba-fotka"
+                        />
+
+                        <div class="sluzba-text">
+                            <h3>Potisk</h3>
+                            <p>
+                                Tiskneme na trička, mikiny, tašky a další.
+                                Zabýváme se zakázkovou výrobou od 1 ks.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="" class="sluzba-container accessible-outline">
+                        <img
+                            src="gradient_sluzba.png"
+                            alt=""
+                            class="gradient-sluzba"
+                        />
+                        <img
+                            src="hlavni_fotky/laser.jpg"
+                            alt=""
+                            class="sluzba-fotka"
+                        />
+
+                        <div class="sluzba-text">
+                            <h3>Laser</h3>
+                            <p>
+                                Řežeme a gravírujeme na CO2 laseru. Zabýváme se
+                                zakázkovou výrobou.
+                            </p>
+                        </div>
+                    </a>
+
+                    <a href="" class="sluzba-container accessible-outline">
+                        <img
+                            src="gradient_sluzba.png"
+                            alt=""
+                            class="gradient-sluzba"
+                        />
+                        <img
+                            src="hlavni_fotky/skartace.jpg"
+                            alt=""
+                            class="sluzba-fotka"
+                        />
 
                         <div class="sluzba-text">
                             <h3>Skartace</h3>
@@ -285,7 +349,11 @@
                             alt=""
                             class="gradient-sluzba"
                         />
-                        <img src="hlavni_fotky/darkove4.jpg" alt="" />
+                        <img
+                            src="hlavni_fotky/darkove4.jpg"
+                            alt=""
+                            class="sluzba-fotka"
+                        />
 
                         <div class="sluzba-text">
                             <h3>Dárkové sady</h3>
@@ -300,7 +368,7 @@
             </section>
 
             <section id="partneri">
-                <h2>Partneři</h2>
+                <h2>Významní odběratelé</h2>
                 <div id="partneri-grid">
                     <div class="partner">
                         <img src="fotky/bkopava.png" alt="" />
@@ -429,24 +497,25 @@
                         >Odkaz na Mapy Google</a
                     >
                 </p>
-                <iframe
+                <!--                 <iframe
                     src="https://en.frame.mapy.cz/s/fadebepobu"
                     frameborder="0"
                     height="600"
                     width="100%"
                     title="Adresa chdcho s odkazem na mapy.cz"
                     tabindex="-1"
-                ></iframe>
-                <!-- <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2567.508913585676!2d17.85330329330171!3d49.94555529801572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713d7eeed76e1ef%3A0xc7b1324b7f1e2776!2zQ2hyw6FuxJtuw6kgZMOtbG55IENoYXJpdHkgT3BhdmE!5e0!3m2!1sen!2scz!4v1717927564759!5m2!1sen!2scz"
+                ></iframe> -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.6841686972484!2d17.85416911388725!3d49.945792215501584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713d7eeed76e1ef%3A0xc7b1324b7f1e2776!2zQ2hyw6FuxJtuw6kgZMOtbG55IENoYXJpdHkgT3BhdmE!5e1!3m2!1sen!2scz!4v1718876403612!5m2!1sen!2scz"
                     width="100%"
                     height="600"
+                    style="border: 0"
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
-                    title="Adresa chdcho s odkazem na mapy.cz"
+                    title="Adresa chdcho s odkazem na google mapy"
                     tabindex="-1"
-                ></iframe> -->
+                ></iframe>
             </section>
         </main>
 
@@ -476,6 +545,32 @@
                     clickable: true,
                 },
                 navigation: false,
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const navItem = document.getElementById("o-nas-nav");
+                const dropdown = navItem.querySelector(".dropdown");
+
+                navItem.addEventListener("click", function (event) {
+                    // Prevent the default action
+                    event.preventDefault();
+
+                    // Toggle the display of the dropdown
+                    if (dropdown.style.display === "flex") {
+                        dropdown.style.display = "none";
+                    } else {
+                        dropdown.style.display = "flex";
+                    }
+                });
+
+                // Close the dropdown if clicked outside
+                document.addEventListener("click", function (event) {
+                    if (!navItem.contains(event.target)) {
+                        dropdown.style.display = "none";
+                    }
+                });
             });
         </script>
     </body>
