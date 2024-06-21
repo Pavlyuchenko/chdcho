@@ -140,7 +140,7 @@ aside {
     margin-top: 30px;
     position: -webkit-sticky;
     position: sticky;
-    top: 40px;
+    top: calc(30px + 80px); /* 80 is height of the sticky nav    */
 
     overflow: auto;
 
@@ -318,7 +318,7 @@ aside button:hover {
     background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 999999;
 
     cursor: pointer;
 }

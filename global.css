@@ -287,6 +287,7 @@ footer {
 #footer-nav div {
     display: flex;
     flex-direction: column;
+
     gap: 15px;
 }
 
@@ -299,6 +300,8 @@ footer {
     font-size: 19px;
     color: #3e3e3e;
     text-decoration: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 #footer-nav a:hover {
     text-decoration: underline;
@@ -356,9 +359,15 @@ footer {
     }
     #footer-nav p {
         font-size: 18px;
+
+        margin-left: 0;
+        transform: none;
     }
     #footer-nav a {
         font-size: 18px;
+
+        margin-left: 0;
+        transform: none;
     }
 }
 
