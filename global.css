@@ -265,11 +265,116 @@ p {
 }
 
 /* FOOTER */
-footer {
+#footer-hlavni-partneri {
+    padding: 40px 50px;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer-nav {
     background-color: #f4f4f4;
 
-    display: grid;
-    place-items: center stretch;
+    padding: 40px 50px;
 
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#footer-nav div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#footer-nav p {
+    margin: 0;
+    font-size: 19px;
+}
+#footer-nav a {
+    font-size: 19px;
+    color: #000;
+    text-decoration: none;
+}
+#footer-nav a:hover {
+    text-decoration: underline;
+}
+
+#footer-copy {
+    padding: 10px 50px;
+
+    color: #3e3e3e;
+
+    display: flex;
+    justify-content: space-between;
+}
+#footer-copy div {
+    display: flex;
+    gap: 50px;
+}
+#footer-copy p {
+    margin: 0;
+    font-size: 18px;
+}
+#footer-copy a {
+    font-size: 18px;
+    color: #3e3e3e;
+    text-decoration: none;
+}
+#footer-copy a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+    #footer-hlavni-partneri {
+        padding: 20px 30px;
+
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #footer-nav {
+        padding: 20px 30px;
+
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #footer-copy {
+        padding: 10px 30px;
+
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    #footer-nav div {
+        gap: 15px;
+    }
+    #footer-nav p {
+        font-size: 18px;
+    }
+    #footer-nav a {
+        font-size: 18px;
+    }
+}
+
+/* infoBox (the thing that says copied to clipboard) */
+#infoBox {
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    transition: top 0.2s ease-in-out;
+    border-radius: 5px;
+
+    z-index: 1000;
+}
+.copy-to-clipboard {
+    cursor: pointer;
 }

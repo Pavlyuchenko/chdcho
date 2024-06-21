@@ -99,6 +99,7 @@
                     Ekologicky zpracováváme odpady v souladu s provozním řádem
                     schváleným Moravskoslezským krajem.
                 </p>
+
                 <h2>Co likvidujeme?</h2>
 
                 <div class="success-badge-container">
@@ -176,6 +177,63 @@
                     nabízíme.
                 </p>
 
+                <div class="callout">
+                    <div id="infoBox"></div>
+                    <div class="callout-dash"></div>
+                    <div class="callout-text">
+                        <p id="callout-kontakt-text">
+                            Kontakt na odpovědnou osobu
+                        </p>
+                        <div id="callout-kontakt">
+                            <div
+                                onclick="copyToClipboard('Jméno bylo zkopírováno', 'contact-jmeno')"
+                                class="copy-to-clipboard"
+                            >
+                                <img src="/person.png" alt="" />
+                                <p id="contact-jmeno">Ludmila Slaninová</p>
+                            </div>
+                            <div
+                                onclick="copyToClipboard('Email byl zkopírován', 'contact-email')"
+                                class="copy-to-clipboard"
+                            >
+                                <img src="/email.png" alt="" />
+                                <p id="contact-email">slaninova@chdcho.cz</p>
+                            </div>
+                            <div
+                                onclick="copyToClipboard('Telefon byl zkopírován', 'contact-telefon')"
+                                class="copy-to-clipboard"
+                            >
+                                <img src="/phone.png" alt="" />
+                                <p id="contact-telefon">608 658 788</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function copyToClipboard(what, id) {
+                        const thingToCopy =
+                            document.getElementById(id).textContent;
+                        navigator.clipboard
+                            .writeText(thingToCopy)
+                            .then(() => {
+                                const infoBox =
+                                    document.getElementById("infoBox");
+                                infoBox.textContent = what + " do schránky.";
+
+                                setTimeout(() => {
+                                    infoBox.style.top = "10px";
+                                }, 10); // Slight delay to trigger transition
+
+                                setTimeout(() => {
+                                    infoBox.style.top = "-50px";
+                                }, 3000);
+                            })
+                            .catch((err) => {
+                                console.error("Failed to copy: ", err);
+                            });
+                    }
+                </script>
+
                 <h2>Naši zákazníci</h2>
                 <p>Komu jsme již pomohli s likvidací elektroodpadu?</p>
                 <div style="margin-top: 40px"></div>
@@ -229,7 +287,6 @@
                         </a>
                     </div>
                 </div>
-                <div id="kontakt"><h2>Kontakt</h2></div>
             </section>
 
             <aside>

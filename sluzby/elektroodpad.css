@@ -348,3 +348,38 @@ aside button:hover {
         box-sizing: border-box;
     }
 }
+
+#callout-kontakt-text {
+    margin: 0;
+    font-size: 30px;
+}
+
+#callout-kontakt {
+    font-weight: 400;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+#callout-kontakt div:hover p {
+    text-decoration: underline;
+}
+#callout-kontakt div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#callout-kontakt img {
+    width: 20px;
+    height: 20px;
+}
+
+#callout-kontakt p {
+    margin: 0;
+
+    font-size: 26px;
+}

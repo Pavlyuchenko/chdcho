@@ -119,6 +119,7 @@
                                 id="pocet-zamestnancu-zdr-post"
                                 class="accessible-outline"
                                 min="0"
+                                value="0"
                                 placeholder="-"
                             />
                         </div>
@@ -130,14 +131,6 @@
                         <span id="usetrite-castka"></span> Kč
                     </div>
                     <p>které byste jinak museli odvést do státní pokladny.</p>
-
-                    <p
-                        id="zobrazit-vice"
-                        class="accessible-outline"
-                        tabindex="0"
-                    >
-                        Zobrazit více ⬇️
-                    </p>
                 </div>
                 <div id="kalk-druhy-krok-alternative">
                     <p>
@@ -147,6 +140,9 @@
                 </div>
 
                 <div id="vice-info">
+                    <hr />
+
+                    <h3>Vysvětlení</h3>
                     <p>
                         Náhradní plnění se týká všech firem, které zaměstnávají
                         více než 25 zaměstnanců.
@@ -256,6 +252,8 @@
 
                     druhyKrokDiv.style.display = "flex";
                     druhyKrokDivAlt.style.display = "none";
+                    document.getElementById("vice-info").style.display =
+                        "block";
                 } else {
                     zamestranciZdrPost.innerHTML = 0;
                     odvod.innerHTML = 0;
@@ -264,6 +262,7 @@
                     usetriteCastka.innerHTML = "0";
 
                     druhyKrokDiv.style.display = "none";
+                    document.getElementById("vice-info").style.display = "none";
 
                     if (pocetZamestnancuValue > 0) {
                         druhyKrokDivAlt.style.display = "block";
