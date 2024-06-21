@@ -534,11 +534,11 @@
             <div id="footer-nav">
                 <div>
                     <p>Chráněné dílny Charity Opava</p>
-                    <p>Adresa 000</p>
-                    <p>747 05 Opava</p>
+                    <p>Přemyslovců 529/37</p>
+                    <p>747 07, Opava 7, Jaktař</p>
                     <p>Telefon +420 000 000 000</p>
                     <p>chdcho@gmail.com</p>
-                    <p>www.cdcho.cz</p>
+                    <p>www.chdcho.cz</p>
                 </div>
                 <div>
                     <a href="" class="accessible-outline">Úvod</a>
@@ -568,7 +568,9 @@
             <p>...certifikace</p>
             <hr />
             <div id="footer-copy">
-                <p>&copy; 2024 Chráněné dílny Charity Opava.</p>
+                <p>
+                    &copy; <span id="year"></span> Chráněné dílny Charity Opava.
+                </p>
                 <div>
                     <a href="" class="accessible-outline">Obchodní podmínky</a>
                     <a href="" class="accessible-outline">Legální dokumenty</a>
@@ -618,6 +620,10 @@
                         dropdown.style.display = "none";
                     }
                 });
+
+                // put current year into footer
+                document.getElementById("year").textContent =
+                    new Date().getFullYear();
             });
         </script>
     </body>
