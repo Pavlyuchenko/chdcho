@@ -6,8 +6,8 @@ nav {
 
     background-color: white;
 
-    height: 80px; /* TODO: delete later probably */
-    padding: 10px 50px;
+    height: 70px; /* TODO: delete later probably */
+    padding: 5px 50px;
 
     display: flex;
     justify-content: space-between;
@@ -70,7 +70,7 @@ hr {
     z-index: 10000;
 
     position: sticky;
-    top: 80px;
+    top: 70px;
 }
 
 /*
