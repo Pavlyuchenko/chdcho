@@ -7,6 +7,7 @@
 
         <link rel="stylesheet" href="../global.css" />
         <link rel="stylesheet" href="../nav.css" />
+        <link rel="stylesheet" href="../gallery.css" />
         <link
             rel="stylesheet"
             href="https://unpkg.com/swiper/swiper-bundle.min.css"
@@ -345,22 +346,22 @@
         </main>
 
         <div class="gallery">
-            <img src="../fotky/budova1.jpg" alt="Image 1" />
-            <img src="../fotky/budova1.jpg" alt="Image 2" />
-            <img src="../fotky/budova1.jpg" alt="Image 3" />
-            <img src="../fotky/budova1.jpg" alt="Image 4" />
-            <img src="../fotky/budova1.jpg" alt="Image 5" />
-            <img src="../fotky/budova1.jpg" alt="Image 6" />
-            <img src="../fotky/budova1.jpg" alt="Image 6" />
-            <img src="../fotky/budova1.jpg" alt="Image 6" />
-            <img src="../fotky/budova1.jpg" alt="Image 6" />
-            <img src="../fotky/budova1.jpg" alt="Image 6" />
-            <img src="../fotky/budova1.jpg" alt="Image 6" />
+            <img src="../fotky/elektroodpad/elektro1.jpg" alt="Image 1" />
+            <img src="../fotky/elektroodpad/elektro2.jpg" alt="Image 2" />
+            <img src="../fotky/elektroodpad/elektro3.jpg" alt="Image 3" />
+            <img src="../fotky/elektroodpad/elektro4.jpg" alt="Image 4" />
+            <img src="../fotky/elektroodpad/elektro5.jpg" alt="Image 5" />
+            <img src="../fotky/elektroodpad/elektro6.jpg" alt="Image 6" />
+            <img src="../fotky/elektroodpad/elektro7.jpg" alt="Image 6" />
         </div>
 
         <div class="lightbox" id="lightbox">
             <span class="close" id="close">&times;</span>
             <img class="lightbox-img" id="lightbox-img" src="" />
+
+            <!-- next and prev -->
+            <button id="prev" class="prev">❮</button>
+            <button id="next" class="next">❯</button>
         </div>
 
         <script>
@@ -374,6 +375,12 @@
                     image.addEventListener("click", () => {
                         lightbox.style.display = "flex";
                         lightboxImg.src = image.src;
+
+                        const currentImageIndex = Array.from(
+                            galleryImages
+                        ).findIndex((img) => img.src === image.src);
+
+                        lightboxImg.src = galleryImages[currentImageIndex].src;
                     });
                 });
 
@@ -383,7 +390,42 @@
 
                 lightbox.addEventListener("click", (e) => {
                     if (e.target !== lightboxImg && e.target !== closeBtn) {
+                        // lightbox.style.display = "none";
+                    }
+                });
+
+                const prevBtn = document.getElementById("prev");
+                const nextBtn = document.getElementById("next");
+
+                let currentImageIndex = 0;
+
+                prevBtn.addEventListener("click", () => {
+                    currentImageIndex =
+                        (currentImageIndex - 1 + galleryImages.length) %
+                        galleryImages.length;
+                    lightboxImg.src = galleryImages[currentImageIndex].src;
+                });
+
+                nextBtn.addEventListener("click", () => {
+                    console.log("clicked");
+
+                    currentImageIndex =
+                        (currentImageIndex + 1) % galleryImages.length;
+                    lightboxImg.src = galleryImages[currentImageIndex].src;
+                });
+
+                document.addEventListener("keydown", (e) => {
+                    if (e.key === "Escape") {
                         lightbox.style.display = "none";
+                    } else if (e.key === "ArrowLeft") {
+                        currentImageIndex =
+                            (currentImageIndex - 1 + galleryImages.length) %
+                            galleryImages.length;
+                        lightboxImg.src = galleryImages[currentImageIndex].src;
+                    } else if (e.key === "ArrowRight") {
+                        currentImageIndex =
+                            (currentImageIndex + 1) % galleryImages.length;
+                        lightboxImg.src = galleryImages[currentImageIndex].src;
                     }
                 });
             });

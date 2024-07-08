@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="nav.css" />
         <link rel="stylesheet" href="index.css" />
         <link rel="stylesheet" href="opravarna.css" />
+        <link rel="stylesheet" href="gallery.css" />
 
         <link rel="shortcut icon" href="/favico.png" type="image/x-icon" />
     </head>
@@ -224,6 +225,99 @@
                     <img src="fotky/loga/msk.png" alt="" />
                 </div>
             </section>
+
+            <h2>Fotogalerie</h2>
+            <div class="gallery">
+                <img src="/fotky/opravarna/opravarna1.jpg" alt="" />
+                <img src="/fotky/opravarna/opravarna2.jpg" alt="" />
+                <img src="/fotky/opravarna/opravarna3.jpg" alt="" />
+                <img src="/fotky/opravarna/opravarna4.jpg" alt="" />
+                <img src="/fotky/opravarna/opravarna6.jpg" alt="" />
+                <img src="/fotky/opravarna/opravarna7.jpg" alt="" />
+                <img src="/fotky/opravarna/opravarna8.jpg" alt="" />
+                <img src="/fotky/opravarna/opravarna9.jpg" alt="" />
+                <img src="/fotky/opravarna/opravarna10.jpg" alt="" />
+            </div>
+
+            <div class="lightbox" id="lightbox">
+                <span class="close" id="close">&times;</span>
+                <img class="lightbox-img" id="lightbox-img" src="" />
+
+                <!-- next and prev -->
+                <button id="prev" class="prev">❮</button>
+                <button id="next" class="next">❯</button>
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const galleryImages =
+                        document.querySelectorAll(".gallery img");
+                    const lightbox = document.getElementById("lightbox");
+                    const lightboxImg = document.getElementById("lightbox-img");
+                    const closeBtn = document.getElementById("close");
+
+                    galleryImages.forEach((image) => {
+                        image.addEventListener("click", () => {
+                            lightbox.style.display = "flex";
+                            lightboxImg.src = image.src;
+
+                            const currentImageIndex = Array.from(
+                                galleryImages
+                            ).findIndex((img) => img.src === image.src);
+
+                            lightboxImg.src =
+                                galleryImages[currentImageIndex].src;
+                        });
+                    });
+
+                    closeBtn.addEventListener("click", () => {
+                        lightbox.style.display = "none";
+                    });
+
+                    lightbox.addEventListener("click", (e) => {
+                        if (e.target !== lightboxImg && e.target !== closeBtn) {
+                            // lightbox.style.display = "none";
+                        }
+                    });
+
+                    const prevBtn = document.getElementById("prev");
+                    const nextBtn = document.getElementById("next");
+
+                    let currentImageIndex = 0;
+
+                    prevBtn.addEventListener("click", () => {
+                        currentImageIndex =
+                            (currentImageIndex - 1 + galleryImages.length) %
+                            galleryImages.length;
+                        lightboxImg.src = galleryImages[currentImageIndex].src;
+                    });
+
+                    nextBtn.addEventListener("click", () => {
+                        console.log("clicked");
+
+                        currentImageIndex =
+                            (currentImageIndex + 1) % galleryImages.length;
+                        lightboxImg.src = galleryImages[currentImageIndex].src;
+                    });
+
+                    document.addEventListener("keydown", (e) => {
+                        if (e.key === "Escape") {
+                            lightbox.style.display = "none";
+                        } else if (e.key === "ArrowLeft") {
+                            currentImageIndex =
+                                (currentImageIndex - 1 + galleryImages.length) %
+                                galleryImages.length;
+                            lightboxImg.src =
+                                galleryImages[currentImageIndex].src;
+                        } else if (e.key === "ArrowRight") {
+                            currentImageIndex =
+                                (currentImageIndex + 1) % galleryImages.length;
+                            lightboxImg.src =
+                                galleryImages[currentImageIndex].src;
+                        }
+                    });
+                });
+            </script>
         </main>
     </body>
 </html>
