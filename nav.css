@@ -37,7 +37,8 @@ nav {
     gap: 30px;
 }
 
-nav a {
+nav a,
+nav #o-nas-nav span {
     text-decoration: none;
     color: #000;
     font-size: 20px;
@@ -50,7 +51,8 @@ nav a {
 
     min-width: fit-content;
 }
-nav a:hover {
+nav a:hover,
+nav #o-nas-nav span:hover {
     color: var(--red);
     text-decoration: underline;
 }
