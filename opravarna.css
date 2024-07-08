@@ -1,0 +1,7 @@
+main {
+    margin: 0 50px;
+}
+
+#main-info {
+    display: flex;
+}
