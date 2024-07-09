@@ -6,6 +6,8 @@ header {
 
 header #title-image {
     width: 100%;
+
+    object-fit: cover;
 }
 
 header #gradient-image {

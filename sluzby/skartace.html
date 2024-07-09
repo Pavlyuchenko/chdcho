@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Skartace | Chráněné dílny Charity Opava</title>
+
+        <link rel="stylesheet" href="../global.css" />
+        <link rel="stylesheet" href="../nav.css" />
+        <link rel="stylesheet" href="../gallery.css" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="elektroodpad.css" />
+        <link rel="stylesheet" href="../partneri.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <nav>
+            <div id="nav-left">
+                <a href="../" class="accessible-outline">
+                    <img
+                        src="../hlavni_fotky/charita_logo.png"
+                        alt=""
+                        id="nav-logo"
+                    />
+                </a>
+                <a href="../sluzby.html" class="accessible-outline">
+                    Naše služby
+                </a>
+                <a href="../aktuality.html" class="accessible-outline">
+                    Aktuality
+                </a>
+                <a href="../kariera.html" class="accessible-outline">Kariéra</a>
+                <a href="../o-nas.html" class="accessible-outline">O nás</a>
+            </div>
+            <div id="nav-right">
+                <a href="../nahradni-plneni.html" class="accessible-outline">
+                    Náhradní plnění
+                </a>
+                <a
+                    href="https://www.kramekprotebe.cz/"
+                    class="button-primary accessible-outline"
+                >
+                    E-shop
+                </a>
+            </div>
+
+            <div id="mobile-nav">
+                <a href="/index.html" class="accessible-outline">
+                    <img src="../red_img.jpg" alt="" width="60" height="60" />
+                </a>
+                <div id="mobile-menu">
+                    <input
+                        type="checkbox"
+                        label="menu-toggle"
+                        title="Menu toggle"
+                        id="menu-toggle"
+                        class="menu-toggle"
+                    />
+                    <label for="menu-toggle" id="menu-text"></label>
+                    <label for="menu-toggle" class="hamburger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+            <div id="mobile-menu-options">
+                <a href="../nahradni-plneni.html">Náhradní plnění</a>
+                <a href="../sluzby.html">Naše služby</a>
+                <a href="../kariera.html">Kariéra</a>
+                <a href="../o-nas.html">O nás</a>
+                <a href="https://www.kramekprotebe.cz/">E-shop</a>
+                <p>Skrýt menu</p>
+            </div>
+        </nav>
+        <hr />
+
+        <div id="nav-alias"></div>
+
+        <header>
+            <img src="imgs/skartace.png" alt="" id="title-image" />
+            <img src="imgs/sluzba_gradient.png" alt="" id="gradient-image" />
+
+            <h1>Skartace</h1>
+            <a href="../sluzby.html" class="accessible-outline">Služby</a>
+        </header>
+
+        <main id="sluzby-main">
+            <section>
+                <p>
+                    Nabízíme také profesionální skartaci dokumentů na
+                    velkokapacitních strojích INTIMUS. Skartace probíhá v
+                    uzavřeném prostoru a pod kamerovým dohledem.
+                </p>
+                <p>
+                    Těm, kteří potřebují například v návaznosti na směrnici GDPR
+                    likvidovat data na svých hard discích, nabízíme službu
+                    demagnetizace na zařízení INTIMUS 9000, využívaný pro
+                    likvidaci dat také aliancí NATO. Zařazení se vejde do kufru
+                    auta a lze s ním tak přijet k zákazníkovi.
+                </p>
+
+                <div class="callout">
+                    <div class="callout-dash"></div>
+                    <div class="callout-text">
+                        Ke skartaci přijímáme vytříděný i nevytříděný papír
+                        (celé šanony, závěsné složky, PE složky, knihy, atd.).
+                    </div>
+                </div>
+
+                <div class="callout">
+                    <div id="infoBox"></div>
+                    <div class="callout-dash"></div>
+                    <div class="callout-text">
+                        <p id="callout-kontakt-text">
+                            Kontakt na odpovědnou osobu
+                        </p>
+                        <div id="callout-kontakt">
+                            <div
+                                onclick="copyToClipboard('Jméno bylo zkopírováno', 'contact-jmeno')"
+                                class="copy-to-clipboard"
+                            >
+                                <img src="../fotky/ostatni/person.png" alt="" />
+                                <p id="contact-jmeno">Jméno Příjmení</p>
+                            </div>
+                            <div
+                                onclick="copyToClipboard('Email byl zkopírován', 'contact-email')"
+                                class="copy-to-clipboard"
+                            >
+                                <img src="../fotky/ostatni/email.png" alt="" />
+                                <p id="contact-email">email@chdcho.cz</p>
+                            </div>
+                            <div
+                                onclick="copyToClipboard('Telefon byl zkopírován', 'contact-telefon')"
+                                class="copy-to-clipboard"
+                            >
+                                <img src="../fotky/ostatni/phone.png" alt="" />
+                                <p id="contact-telefon">777 777 777</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function copyToClipboard(what, id) {
+                        const thingToCopy =
+                            document.getElementById(id).textContent;
+                        navigator.clipboard
+                            .writeText(thingToCopy)
+                            .then(() => {
+                                const infoBox =
+                                    document.getElementById("infoBox");
+                                infoBox.textContent = what + " do schránky.";
+
+                                setTimeout(() => {
+                                    infoBox.style.top = "10px";
+                                }, 10); // Slight delay to trigger transition
+
+                                setTimeout(() => {
+                                    infoBox.style.top = "-50px";
+                                }, 3000);
+                            })
+                            .catch((err) => {
+                                console.error("Failed to copy: ", err);
+                            });
+                    }
+                </script>
+
+                <h2>Naši zákazníci</h2>
+                <p>Komu jsme již pomohli s likvidací elektroodpadu?</p>
+                <div style="margin-top: 40px"></div>
+                <div id="partneri-grid">
+                    <div class="partner">
+                        <img src="../fotky/loga/bkopava.png" alt="" />
+                        <h3>BK Opava</h3>
+                        <a
+                            href=""
+                            rel="nofollow"
+                            class="accessible-outline"
+                            target="_blank"
+                        >
+                            www.bkopava.cz
+                        </a>
+                    </div>
+                    <div class="partner">
+                        <img src="../fotky/loga/bkopava.png" alt="" />
+                        <h3>BK Opava</h3>
+                        <a
+                            href=""
+                            rel="nofollow"
+                            class="accessible-outline"
+                            target="_blank"
+                        >
+                            www.bkopava.cz
+                        </a>
+                    </div>
+                    <div class="partner">
+                        <img src="../fotky/loga/bkopava.png" alt="" />
+                        <h3>BK Opava</h3>
+                        <a
+                            href=""
+                            rel="nofollow"
+                            class="accessible-outline"
+                            target="_blank"
+                        >
+                            www.bkopava.cz
+                        </a>
+                    </div>
+                    <div class="partner">
+                        <img src="../fotky/loga/bkopava.png" alt="" />
+                        <h3>BK Opava</h3>
+                        <a
+                            href=""
+                            rel="nofollow"
+                            class="accessible-outline"
+                            target="_blank"
+                        >
+                            www.bkopava.cz
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <aside>
+                <div id="contact-form">
+                    <h2>Kontaktujte nás</h2>
+                    <label for="name">Jméno a příjmení *</label>
+                    <input
+                        type="text"
+                        class="accessible-outline"
+                        name="name"
+                        id="name"
+                    />
+
+                    <label for="company">Název firmy/organizace</label>
+                    <input
+                        type="text"
+                        class="accessible-outline"
+                        name="company"
+                        id="company"
+                    />
+
+                    <label for="email">E-mail *</label>
+                    <input
+                        type="email"
+                        class="accessible-outline"
+                        name="email"
+                        id="email"
+                        autocomplete="on"
+                        autocompletetype="email"
+                    />
+
+                    <label for="phone">Telefon</label>
+                    <input
+                        type="tel"
+                        placeholder="+420 777 777 777"
+                        class="accessible-outline"
+                        name="phone"
+                        id="phone"
+                    />
+
+                    <label for="message">Text zprávy*</label>
+                    <textarea
+                        name="message"
+                        id="message"
+                        cols="30"
+                        rows="4"
+                        class="accessible-outline"
+                    ></textarea>
+
+                    <button class="accessible-outline">Odeslat zprávu</button>
+                    <a href="" class="accessible-outline"
+                        >Ochrana soukromí a podmínky</a
+                    >
+                </div>
+            </aside>
+        </main>
+
+        <div class="gallery">
+            <img src="../fotky/skartace/skartace1.jpg" alt="Image 1" />
+            <img src="../fotky/skartace/skartace2.jpg" alt="Image 2" />
+            <img src="../fotky/skartace/skartace3.jpg" alt="Image 3" />
+            <img src="../fotky/skartace/skartace4.jpg" alt="Image 4" />
+            <img src="../fotky/skartace/skartace5.jpg" alt="Image 5" />
+            <img src="../fotky/skartace/skartace6.jpg" alt="Image 6" />
+        </div>
+
+        <div class="lightbox" id="lightbox">
+            <span class="close" id="close">&times;</span>
+            <img class="lightbox-img" id="lightbox-img" src="" />
+
+            <!-- next and prev -->
+            <button id="prev" class="prev">❮</button>
+            <button id="next" class="next">❯</button>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const galleryImages = document.querySelectorAll(".gallery img");
+                const lightbox = document.getElementById("lightbox");
+                const lightboxImg = document.getElementById("lightbox-img");
+                const closeBtn = document.getElementById("close");
+
+                galleryImages.forEach((image) => {
+                    image.addEventListener("click", () => {
+                        lightbox.style.display = "flex";
+                        lightboxImg.src = image.src;
+
+                        const currentImageIndex = Array.from(
+                            galleryImages
+                        ).findIndex((img) => img.src === image.src);
+
+                        lightboxImg.src = galleryImages[currentImageIndex].src;
+                    });
+                });
+
+                closeBtn.addEventListener("click", () => {
+                    lightbox.style.display = "none";
+                });
+
+                lightbox.addEventListener("click", (e) => {
+                    if (e.target !== lightboxImg && e.target !== closeBtn) {
+                        lightbox.style.display = "none";
+                    }
+                });
+
+                const prevBtn = document.getElementById("prev");
+                const nextBtn = document.getElementById("next");
+
+                let currentImageIndex = 0;
+
+                prevBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+
+                    currentImageIndex =
+                        (currentImageIndex - 1 + galleryImages.length) %
+                        galleryImages.length;
+                    lightboxImg.src = galleryImages[currentImageIndex].src;
+                });
+
+                nextBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+
+                    currentImageIndex =
+                        (currentImageIndex + 1) % galleryImages.length;
+                    lightboxImg.src = galleryImages[currentImageIndex].src;
+                });
+
+                document.addEventListener("keydown", (e) => {
+                    if (e.key === "Escape") {
+                        lightbox.style.display = "none";
+                    } else if (e.key === "ArrowLeft") {
+                        currentImageIndex =
+                            (currentImageIndex - 1 + galleryImages.length) %
+                            galleryImages.length;
+                        lightboxImg.src = galleryImages[currentImageIndex].src;
+                    } else if (e.key === "ArrowRight") {
+                        currentImageIndex =
+                            (currentImageIndex + 1) % galleryImages.length;
+                        lightboxImg.src = galleryImages[currentImageIndex].src;
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
