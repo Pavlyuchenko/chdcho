@@ -23,36 +23,68 @@
     <body>
         <nav>
             <div id="nav-left">
-                <a href="/" class="accessible-outline">
+                <a href="/" class="accessible-outline" aria-label="Domů">
                     <img
                         src="hlavni_fotky/charita_logo.png"
                         alt=""
                         id="nav-logo"
                     />
                 </a>
-                <a href="/sluzby.html" class="accessible-outline">
+                <a
+                    href="index.html"
+                    class="accessible-outline active"
+                    id="nav-active"
+                    >Domů</a
+                >
+                <a href="sluzby.html" class="accessible-outline">
                     Naše služby
                 </a>
-                <a href="/aktuality.html" class="accessible-outline">
+                <!-- <a href="aktuality.html" class="accessible-outline">
                     Aktuality
+                </a> -->
+                <a href="nahradni-plneni.html" class="accessible-outline">
+                    Náhradní plnění
                 </a>
-                <a href="/kariera.html" class="accessible-outline">Kariéra</a>
-                <a href="/o-nas.html" class="accessible-outline">O nás</a>
+                <div id="o-nas-nav" class="nav-item">
+                    <span tabindex="0" class="accessible-outline">O nás</span>
+                    <div class="dropdown">
+                        <a href="o-nas.html" class="accessible-outline">
+                            O chdcho
+                        </a>
+                        <a href="prodejny.html" class="accessible-outline">
+                            Prodejny
+                        </a>
+                        <a href="kontakt.html" class="accessible-outline">
+                            Kontakt
+                        </a>
+                        <a href="kariera.html" class="accessible-outline">
+                            Kariéra
+                        </a>
+                    </div>
+                </div>
             </div>
             <div id="nav-right">
-                <a href="/nahradni-plneni.html" class="accessible-outline">
-                    Náhradní plnění
+                <a href="opravarna.html" class="accessible-outline">
+                    Opravárna
+                </a>
+                <a
+                    href="https://www.charitaopava.cz/"
+                    class="accessible-outline"
+                    target="_blank"
+                >
+                    Charita Opava
                 </a>
                 <a
                     href="https://www.kramekprotebe.cz/"
                     class="button-primary accessible-outline"
+                    target="_blank"
                 >
                     E-shop
                 </a>
             </div>
 
             <div id="mobile-nav">
-                <a href="/" class="accessible-outline">
+                <a href="" class="accessible-outline">
                     <img
                         src="hlavni_fotky/charita_logo.png"
                         alt=""
@@ -76,10 +108,10 @@
                 </div>
             </div>
             <div id="mobile-menu-options">
-                <a href="/nahradni-plneni.html">Náhradní plnění</a>
-                <a href="/sluzby.html">Naše služby</a>
-                <a href="/kariera.html">Kariéra</a>
-                <a href="/o-nas.html">O nás</a>
+                <a href="nahradni-plneni.html">Náhradní plnění</a>
+                <a href="sluzby.html">Naše služby</a>
+                <a href="kariera.html">Kariéra</a>
+                <a href="o-nas.html">O nás</a>
                 <a href="https://www.kramekprotebe.cz/">E-shop</a>
                 <p>Skrýt menu</p>
             </div>
