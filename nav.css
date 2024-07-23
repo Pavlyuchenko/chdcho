@@ -274,10 +274,6 @@ hr {
     transform: translateX(-50%);
 }
 
-#nav-alias {
-    display: none;
-}
-
 @media (max-width: 1000px) {
     nav {
         padding: 10px 15px;
@@ -287,8 +283,8 @@ hr {
 
         height: 60px;
     }
-    #nav-alias {
-        height: 60px;
+
+    #mobile-nav a {
         display: flex;
     }
 
