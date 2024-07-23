@@ -339,14 +339,16 @@
                 const lightboxImg = document.getElementById("lightbox-img");
                 const closeBtn = document.getElementById("close");
 
+                var currentImageIndex = 0;
+
                 galleryImages.forEach((image) => {
                     image.addEventListener("click", () => {
                         lightbox.style.display = "flex";
                         lightboxImg.src = image.src;
 
-                        const currentImageIndex = Array.from(
-                            galleryImages
-                        ).findIndex((img) => img.src === image.src);
+                        currentImageIndex = Array.from(galleryImages).findIndex(
+                            (img) => img.src === image.src
+                        );
 
                         lightboxImg.src = galleryImages[currentImageIndex].src;
                     });
@@ -364,8 +366,6 @@
 
                 const prevBtn = document.getElementById("prev");
                 const nextBtn = document.getElementById("next");
-
-                let currentImageIndex = 0;
 
                 prevBtn.addEventListener("click", (e) => {
                     e.stopPropagation();

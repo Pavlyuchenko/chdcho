@@ -325,3 +325,59 @@ aside button:hover {
 
     font-size: 26px;
 }
+
+.partner-img-wrapper {
+    min-height: 130px;
+
+    display: flex;
+    align-items: center;
+}
+
+.in-text-image {
+    width: 50%;
+    /* center */
+    margin-left: 25%;
+    margin-right: 25%;
+}
+@media (max-width: 1000px) {
+    .in-text-image {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Otázky a odpovědi */
+.qna {
+    margin-bottom: 20px;
+
+    background-color: #f7e1e1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #dfcbcb;
+}
+.question {
+    margin: 5px 0;
+
+    font-weight: bold;
+    font-size: 26px;
+
+    user-select: none;
+    cursor: pointer;
+}
+.question::before {
+    content: "▸";
+
+    margin-right: 5px;
+}
+.closed-question::before {
+    content: "▾" !important;
+}
+.answer {
+    display: none;
+    margin-left: 28px;
+
+    font-size: 22px;
+
+    line-height: 1.5;
+}
