@@ -69,3 +69,21 @@
         max-width: calc(100% - 30px);
     }
 }
+
+@media (max-width: 600px) {
+    .partner h3 {
+        font-size: 24px;
+
+        margin-top: 15px;
+    }
+    .partner a {
+        font-size: 16px;
+    }
+    #partneri-grid {
+        gap: 30px;
+    }
+    #partneri {
+        margin: 0 15px;
+        max-width: calc(100% - 30px);
+    }
+}
