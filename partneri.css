@@ -15,6 +15,7 @@
 .partner img {
     margin-left: 50%;
     transform: translateX(-50%);
+    width: 100%;
 }
 .partner h3 {
     font-size: 30px;
@@ -66,11 +67,5 @@
     #partneri {
         margin: 0 15px;
         max-width: calc(100% - 30px);
-    }
-}
-
-@media (max-width: 600px) {
-    #partneri-grid img {
-        width: 50%;
     }
 }
