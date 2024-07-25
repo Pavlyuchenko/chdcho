@@ -15,7 +15,9 @@
 .partner img {
     margin-left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 80%;
+    max-height: 100px;
+    object-fit: contain;
 }
 .partner h3 {
     font-size: 30px;

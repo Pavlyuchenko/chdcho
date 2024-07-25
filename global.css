@@ -178,7 +178,7 @@ p {
 
     width: 100%;
 
-    margin: 40px 0px;
+    margin: 50px 0px;
 }
 .callout-text {
     font-weight: 600;
@@ -193,8 +193,9 @@ p {
     position: relative;
 
     width: 100%;
-
-    display: grid;
+}
+.callout-text a {
+    display: inline;
 }
 /* Dash before callout height 100% widht 8px */
 .callout-dash {

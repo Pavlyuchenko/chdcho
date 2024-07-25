@@ -2,8 +2,10 @@
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
+    gap: 45px;
     padding: 50px;
+
+    margin-top: 120px;
 }
 
 .gallery img {
