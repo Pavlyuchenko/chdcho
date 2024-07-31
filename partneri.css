@@ -13,11 +13,13 @@
     padding: 0 calc((100% - 70rem) / 2);
 }
 .partner img {
-    margin-left: 50%;
-    transform: translateX(-50%);
     width: 80%;
     max-height: 100px;
     object-fit: contain;
+
+    /* center */
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .partner h3 {
     font-size: 30px;
