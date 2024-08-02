@@ -253,7 +253,7 @@
                 if (pocetZamestnancuValue >= 25) {
                     // calculate ratio nonOZP : OZP
                     let pocetZamestnancuSeZdravPost =
-                        Math.round(pocetZamestnancuValue / 25) -
+                        pocetZamestnancuValue / 25 -
                         pocetZamestnancuZdrPosValue;
 
                     // prevent negation
