@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Skartace | Chráněné dílny Charity Opava</title>
+        <title>Skartace a demagnetizace | Chráněné dílny Charity Opava</title>
 
         <link rel="stylesheet" href="../global.css" />
         <link rel="stylesheet" href="../nav.css" />
@@ -93,23 +93,23 @@
             <img src="imgs/skartace.png" alt="" id="title-image" />
             <img src="imgs/sluzba_gradient.png" alt="" id="gradient-image" />
 
-            <h1>Skartace</h1>
+            <h1>Skartace a demagnetizace</h1>
             <a href="../sluzby.html" class="accessible-outline">Služby</a>
         </header>
 
         <main id="sluzby-main">
             <section>
                 <p>
-                    Nabízíme také profesionální skartaci dokumentů na
+                    Nabízíme profesionální skartaci dokumentů na
                     velkokapacitních strojích INTIMUS. Skartace probíhá v
                     uzavřeném prostoru a pod kamerovým dohledem.
                 </p>
                 <p>
                     Těm, kteří potřebují například v návaznosti na směrnici GDPR
-                    likvidovat data na svých hard discích, nabízíme službu
-                    demagnetizace na zařízení INTIMUS 9000, využívaný pro
-                    likvidaci dat také aliancí NATO. Zařazení se vejde do kufru
-                    auta a lze s ním tak přijet k zákazníkovi.
+                    likvidovat data na svých HDD nebo magnetických nosičích,
+                    nabízíme službu demagnetizace na zařízení INTIMUS 9000,
+                    využívaný pro likvidaci dat také aliancí NATO. Zařazení se
+                    vejde do kufru auta a lze s ním tak přijet k zákazníkovi.
                 </p>
 
                 <div class="callout">
@@ -119,6 +119,27 @@
                         (celé šanony, závěsné složky, PE složky, knihy, atd.).
                     </div>
                 </div>
+
+                <p>
+                    Po domluvě umožňujeme osobní přítomnost u skartace, případně
+                    si můžete vyžádat video z průběhu skartace. Žádost o video
+                    musí být uvedena při předání materiálu a datový nosič je
+                    zpoplatněn. Samozřejmostí je vydání potvrzení o skartaci
+                    dokumentů, kterou zasíláme zároveň s fakturou.
+                </p>
+
+                <p>
+                    Po Opavě nabízíme svoz většího množství materiálu ke
+                    skartaci zdarma, z ostatních míst po domluvě za úplatu.
+                    Standardně přijímáme i kamionové množství materiálu denně.
+                    Každá dodávka je zvážena na můstkové nebo mostové váze.
+                </p>
+                <p>
+                    Ke skartaci přijímáme také nevytříděné dokumenty, jako
+                    dokumenty v šanonech, závěsných nebo PE složkách, případně
+                    knihy a podobně. Cena je však vyšší kvůli tomu, že je třeba
+                    dokumenty nejprve vytřídit.
+                </p>
 
                 <div class="callout">
                     <div id="infoBox"></div>
@@ -177,60 +198,52 @@
                     }
                 </script>
 
-                <h2>Naši zákazníci</h2>
-                <p>Komu jsme již pomohli s likvidací elektroodpadu?</p>
-                <div style="margin-top: 40px"></div>
-                <div id="partneri-grid">
-                    <div class="partner">
-                        <img src="../fotky/loga/bkopava.png" alt="" />
-                        <h3>BK Opava</h3>
-                        <a
-                            href=""
-                            rel="nofollow"
-                            class="accessible-outline"
-                            target="_blank"
-                        >
-                            www.bkopava.cz
-                        </a>
+                <div>
+                    <h2>Otázky a odpovědi</h2>
+                    <div class="qna">
+                        <div class="question">
+                            Skartujete taky důvěrné dokumenty?
+                        </div>
+                        <div class="answer">
+                            Naše skartovací stroje nemají certifikaci na stupeň
+                            důvěrné.
+                        </div>
                     </div>
-                    <div class="partner">
-                        <img src="../fotky/loga/bkopava.png" alt="" />
-                        <h3>BK Opava</h3>
-                        <a
-                            href=""
-                            rel="nofollow"
-                            class="accessible-outline"
-                            target="_blank"
-                        >
-                            www.bkopava.cz
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <img src="../fotky/loga/bkopava.png" alt="" />
-                        <h3>BK Opava</h3>
-                        <a
-                            href=""
-                            rel="nofollow"
-                            class="accessible-outline"
-                            target="_blank"
-                        >
-                            www.bkopava.cz
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <img src="../fotky/loga/bkopava.png" alt="" />
-                        <h3>BK Opava</h3>
-                        <a
-                            href=""
-                            rel="nofollow"
-                            class="accessible-outline"
-                            target="_blank"
-                        >
-                            www.bkopava.cz
-                        </a>
+                    <div class="qna">
+                        <div class="question">
+                            Jaké jsou náklady na skartaci dokumentů?
+                        </div>
+                        <div class="answer">
+                            Záleží, v jaké podobě k nám materiál dorazí, zda se
+                            jedná o vytříděný nebo nevytříděný materiál v
+                            případě papírových dokumentů nebo zda se jedná o
+                            magnetický nosič. V ceně se odrazí i skutečnost
+                            pokud byla domluvena doprava a případně požadován
+                            výnos materiálu např. ze sklepa nebo půdy. Ceny
+                            zjistíte po zavolání.
+                        </div>
                     </div>
                 </div>
             </section>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    var questions = document.querySelectorAll(".question");
+                    questions.forEach(function (question) {
+                        question.addEventListener("click", function () {
+                            var answer = this.nextElementSibling;
+                            if (answer.style.display === "block") {
+                                answer.style.display = "none";
+                                // change question ::before symbol to ▸ and remove ▾
+                                question.classList.remove("closed-question");
+                            } else {
+                                answer.style.display = "block";
+                                // change question ::before symbol to ▾
+                                question.classList.add("closed-question");
+                            }
+                        });
+                    });
+                });
+            </script>
 
             <aside>
                 <div id="contact-form">

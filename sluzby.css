@@ -59,7 +59,7 @@
 
     position: relative;
 }
-.sluzba-text h3::after {
+.sluzba-text h3::before {
     content: "🡒"; /* Unicode character for the arrow */
     font-size: 100px;
 
@@ -72,11 +72,11 @@
     transition: opacity 0.5s ease-out, bottom 0.3s ease-out;
     color: white;
 }
-.sluzba-container:hover .sluzba-text h3::after {
+.sluzba-container:hover .sluzba-text h3::before {
     opacity: 1;
 }
 
-.sluzba-container:not(:hover) .sluzba-text h3::after {
+.sluzba-container:not(:hover) .sluzba-text h3::before {
     animation: arrowOut 0.5s forwards; /* Forward fill to hold the end state */
 }
 @keyframes arrowOut {
