@@ -22,8 +22,8 @@ nav {
 }
 
 #nav-active {
-    color: var(--red);
-    text-decoration: underline;
+    color: var(--red) !important;
+    text-decoration: underline !important;
     font-weight: bold;
 }
 

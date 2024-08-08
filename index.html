@@ -27,10 +27,7 @@
                         id="nav-logo"
                     />
                 </a>
-                <a
-                    href="index.html"
-                    class="accessible-outline active"
-                    id="nav-active"
+                <a href="/" class="accessible-outline active" id="nav-active"
                     >Domů</a
                 >
                 <a href="sluzby.html" class="accessible-outline">
@@ -107,7 +104,7 @@
                 </div>
             </div>
             <div id="mobile-menu-options" class="mobile-menu-absolute">
-                <a href="index.html">Domů</a>
+                <a href="/">Domů</a>
                 <a href="https://www.kramekprotebe.cz/" target="_blank"
                     >E-shop ↗</a
                 >
@@ -118,7 +115,82 @@
                 <p id="close-menu">✕ Skrýt menu</p>
             </div>
 
+            <div id="mobile-menu-o-nas-options" class="mobile-menu-absolute">
+                <a href="o-nas.html">O chdcho</a>
+                <a href="prodejny.html">Prodejny</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="kariera.html">Kariéra</a>
+                <p id="mobile-back1">← Zpět</p>
+                <p id="close-menu2">✕ Skrýt menu</p>
+            </div>
+            <div id="mobile-menu-projekty-options" class="mobile-menu-absolute">
+                <a href="kurzy.html">Kurzy</a>
+                <a href="opravarna.html">Opravárna</a>
+                <a href="https://charitaopava.cz" target="_blank"
+                    >Charita Opava</a
+                >
+                <p id="mobile-back2">← Zpět</p>
+                <p id="close-menu3">✕ Skrýt menu</p>
+            </div>
+
             <script>
+                function hideAll(
+                    mobileMenuOptions,
+                    mobileMenuONasOptions,
+                    mobileMenuProjektyOptions
+                ) {
+                    mobileMenuOptions.style.display = "none";
+                    mobileMenuONasOptions.style.display = "none";
+                    mobileMenuProjektyOptions.style.display = "none";
+                }
+
+                function back(
+                    event,
+                    mobileMenuOptions,
+                    mobileMenuONasOptions,
+                    mobileMenuProjektyOptions
+                ) {
+                    // Prevent the default action
+                    event.preventDefault();
+
+                    hideAll(
+                        mobileMenuOptions,
+                        mobileMenuONasOptions,
+                        mobileMenuProjektyOptions
+                    );
+
+                    mobileMenuOptions.style.display = "flex";
+                }
+
+                function toggleHamburger() {
+                    document
+                        .getElementById("menu-text")
+                        .classList.toggle("menu-text-menu");
+                    document
+                        .getElementById("menu-text")
+                        .classList.toggle("menu-text-zavrit");
+                    document
+                        .getElementById("class-menu")
+                        .classList.toggle("hamburger-menu-cross");
+                }
+                function close(
+                    event,
+                    mobileMenuOptions,
+                    mobileMenuONasOptions,
+                    mobileMenuProjektyOptions
+                ) {
+                    // Prevent the default action
+                    event.preventDefault();
+
+                    hideAll(
+                        mobileMenuOptions,
+                        mobileMenuONasOptions,
+                        mobileMenuProjektyOptions
+                    );
+
+                    toggleHamburger();
+                }
+
                 document.addEventListener("DOMContentLoaded", function () {
                     const mobileMenu = document.getElementById("mobile-menu");
                     const mobileMenuOptions = document.getElementById(
@@ -146,105 +218,50 @@
                                 .getElementById("menu-text")
                                 .classList.contains("menu-text-zavrit")
                         ) {
-                            mobileMenuOptions.style.display = "none";
-
-                            // hide o nas options
-                            mobileMenuONasOptions.style.display = "none";
-                            // hide projekty options
-                            mobileMenuProjektyOptions.style.display = "none";
+                            hideAll(
+                                mobileMenuOptions,
+                                mobileMenuONasOptions,
+                                mobileMenuProjektyOptions
+                            );
                         } else {
-                            mobileMenuOptions.style.display = "flex";
+                            hideAll(
+                                mobileMenuOptions,
+                                mobileMenuONasOptions,
+                                mobileMenuProjektyOptions
+                            );
 
-                            // hide o nas options
-                            mobileMenuONasOptions.style.display = "none";
-                            // hide projekty options
-                            mobileMenuProjektyOptions.style.display = "none";
+                            mobileMenuOptions.style.display = "flex";
                         }
 
-                        /* #menu-text::after { content: "Zavřít";} */
-                        document
-                            .getElementById("menu-text")
-                            .classList.toggle("menu-text-menu");
-                        document
-                            .getElementById("menu-text")
-                            .classList.toggle("menu-text-zavrit");
-                        document
-                            .getElementById("class-menu")
-                            .classList.toggle("hamburger-menu-cross");
+                        toggleHamburger();
                     });
 
                     const closeMenu = document.getElementById("close-menu");
                     closeMenu.addEventListener("click", function (event) {
-                        // Prevent the default action
-                        event.preventDefault();
-
-                        // hide menu options
-                        mobileMenuOptions.style.display = "none";
-
-                        // toggle the menu text classes
-                        document
-                            .getElementById("menu-text")
-                            .classList.toggle("menu-text-menu");
-                        document
-                            .getElementById("menu-text")
-                            .classList.toggle("menu-text-zavrit");
-
-                        // toggle the hamburger menu classes
-                        document
-                            .getElementById("class-menu")
-                            .classList.toggle("hamburger-menu-cross");
+                        close(
+                            event,
+                            mobileMenuOptions,
+                            mobileMenuONasOptions,
+                            mobileMenuProjektyOptions
+                        );
                     });
                     const closeMenu2 = document.getElementById("close-menu2");
                     closeMenu2.addEventListener("click", function (event) {
-                        // Prevent the default action
-                        event.preventDefault();
-
-                        // hide menu options
-                        mobileMenuOptions.style.display = "none";
-
-                        // hide o nas options
-                        mobileMenuONasOptions.style.display = "none";
-                        // hide projekty options
-                        mobileMenuProjektyOptions.style.display = "none";
-
-                        // toggle the menu text classes
-                        document
-                            .getElementById("menu-text")
-                            .classList.toggle("menu-text-menu");
-                        document
-                            .getElementById("menu-text")
-                            .classList.toggle("menu-text-zavrit");
-
-                        // toggle the hamburger menu classes
-                        document
-                            .getElementById("class-menu")
-                            .classList.toggle("hamburger-menu-cross");
+                        close(
+                            event,
+                            mobileMenuOptions,
+                            mobileMenuONasOptions,
+                            mobileMenuProjektyOptions
+                        );
                     });
                     const closeMenu3 = document.getElementById("close-menu3");
                     closeMenu3.addEventListener("click", function (event) {
-                        // Prevent the default action
-                        event.preventDefault();
-
-                        // hide menu options
-                        mobileMenuOptions.style.display = "none";
-
-                        // hide o nas options
-                        mobileMenuONasOptions.style.display = "none";
-                        // hide projekty options
-                        mobileMenuProjektyOptions.style.display = "none";
-
-                        // toggle the menu text classes
-                        document
-                            .getElementById("menu-text")
-                            .classList.toggle("menu-text-menu");
-                        document
-                            .getElementById("menu-text")
-                            .classList.toggle("menu-text-zavrit");
-
-                        // toggle the hamburger menu classes
-                        document
-                            .getElementById("class-menu")
-                            .classList.toggle("hamburger-menu-cross");
+                        close(
+                            event,
+                            mobileMenuOptions,
+                            mobileMenuONasOptions,
+                            mobileMenuProjektyOptions
+                        );
                     });
 
                     mobileMenuONas.addEventListener("click", function (event) {
@@ -254,12 +271,13 @@
                         if (mobileMenuONasOptions.style.display === "flex") {
                             mobileMenuONasOptions.style.display = "none";
                         } else {
-                            mobileMenuONasOptions.style.display = "flex";
+                            hideAll(
+                                mobileMenuOptions,
+                                mobileMenuONasOptions,
+                                mobileMenuProjektyOptions
+                            );
 
-                            // hide projekty options
-                            mobileMenuProjektyOptions.style.display = "none";
-                            // hide menu options
-                            mobileMenuOptions.style.display = "none";
+                            mobileMenuONasOptions.style.display = "flex";
                         }
                     });
 
@@ -276,62 +294,67 @@
                                 mobileMenuProjektyOptions.style.display =
                                     "none";
                             } else {
+                                hideAll(
+                                    mobileMenuOptions,
+                                    mobileMenuONasOptions,
+                                    mobileMenuProjektyOptions
+                                );
+
                                 mobileMenuProjektyOptions.style.display =
                                     "flex";
-
-                                // hide o nas options
-                                mobileMenuONasOptions.style.display = "none";
-                                // hide menu options
-                                mobileMenuOptions.style.display = "none";
                             }
                         }
                     );
 
                     const mobileBack1 = document.getElementById("mobile-back1");
                     mobileBack1.addEventListener("click", function (event) {
-                        // Prevent the default action
-                        event.preventDefault();
-
-                        // hide o nas options
-                        mobileMenuONasOptions.style.display = "none";
-                        // hide projekty options
-                        mobileMenuProjektyOptions.style.display = "none";
-                        // hide menu options
-                        mobileMenuOptions.style.display = "flex";
+                        back(
+                            event,
+                            mobileMenuOptions,
+                            mobileMenuONasOptions,
+                            mobileMenuProjektyOptions
+                        );
                     });
 
                     const mobileBack2 = document.getElementById("mobile-back2");
                     mobileBack2.addEventListener("click", function (event) {
-                        // Prevent the default action
-                        event.preventDefault();
-
-                        // hide o nas options
-                        mobileMenuONasOptions.style.display = "none";
-                        // hide projekty options
-                        mobileMenuProjektyOptions.style.display = "none";
-                        // hide menu options
-                        mobileMenuOptions.style.display = "flex";
+                        back(
+                            event,
+                            mobileMenuOptions,
+                            mobileMenuONasOptions,
+                            mobileMenuProjektyOptions
+                        );
                     });
                 });
             </script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const navItem = document.getElementById("o-nas-nav");
+                    const dropdown = navItem.querySelector(".dropdown");
 
-            <div id="mobile-menu-o-nas-options" class="mobile-menu-absolute">
-                <a href="o-nas.html">O chdcho</a>
-                <a href="prodejny.html">Prodejny</a>
-                <a href="kontakt.html">Kontakt</a>
-                <a href="kariera.css">Kariéra</a>
-                <p id="mobile-back1">← Zpět</p>
-                <p id="close-menu2">✕ Skrýt menu</p>
-            </div>
-            <div id="mobile-menu-projekty-options" class="mobile-menu-absolute">
-                <a href="kurzy.html">Kurzy</a>
-                <a href="opravarna.css">Opravárna</a>
-                <a href="https://charitaopava.cz" target="_blank"
-                    >Charita Opava</a
-                >
-                <p id="mobile-back2">← Zpět</p>
-                <p id="close-menu3">✕ Skrýt menu</p>
-            </div>
+                    navItem.addEventListener("click", function (event) {
+                        // Prevent the default action
+
+                        // Toggle the display of the dropdown
+                        if (dropdown.style.display === "flex") {
+                            dropdown.style.display = "none";
+                        } else {
+                            dropdown.style.display = "flex";
+                        }
+                    });
+
+                    // Close the dropdown if clicked outside
+                    document.addEventListener("click", function (event) {
+                        if (!navItem.contains(event.target)) {
+                            dropdown.style.display = "none";
+                        }
+                    });
+
+                    // put current year into footer
+                    document.getElementById("year").textContent =
+                        new Date().getFullYear();
+                });
+            </script>
         </nav>
         <hr />
 
@@ -765,27 +788,76 @@
                     <p>www.chdcho.cz</p>
                 </div>
                 <div>
-                    <a href="" class="accessible-outline">Úvod</a>
-                    <a href="" class="accessible-outline">O nás</a>
-                    <a href="" class="accessible-outline">Kontakt</a>
-                    <a href="" class="accessible-outline">Kariéra</a>
-                    <a href="" class="accessible-outline">Aktuality</a>
-                    <a href="" class="accessible-outline">Naše služby</a>
+                    <a href="/" class="accessible-outline">Úvod</a>
+                    <a href="/sluzby.html" class="accessible-outline"
+                        >Naše služby</a
+                    >
+                    <a href="/nahradni-plneni.html" class="accessible-outline"
+                        >Náhradní plnění</a
+                    >
+                    <a href="/o-nas.html" class="accessible-outline"
+                        >O chdcho</a
+                    >
+                    <a href="/prodejny.html" class="accessible-outline"
+                        >Prodejny</a
+                    >
+                    <a href="/kontakt.html" class="accessible-outline"
+                        >Kontakt</a
+                    >
+                    <a href="/kariera.html" class="accessible-outline"
+                        >Kariéra</a
+                    >
                 </div>
                 <div>
-                    <a href="" class="accessible-outline"
+                    <a href="/kurzy.html" class="accessible-outline">Kurzy</a>
+                    <a href="/opravarna.html" class="accessible-outline"
+                        >Opravárna</a
+                    >
+                    <a
+                        href="https://charitaopava.cz"
+                        target="_blank"
+                        class="accessible-outline"
+                        >Charita Opava</a
+                    >
+                    <a
+                        href="https://kramekprotebe.cz"
+                        target="_blank"
+                        class="accessible-outline"
+                        >E-shop</a
+                    >
+                </div>
+                <div>
+                    <a
+                        href="/sluzby/elektroodpad.html"
+                        class="accessible-outline"
                         >Likvidace Elektroodpadu</a
                     >
-                    <a href="" class="accessible-outline">Kompletační práce</a>
-                    <a href="" class="accessible-outline">Potisk</a>
-                    <a href="" class="accessible-outline">Laser</a>
-                    <a href="" class="accessible-outline">Šicí dílna</a>
-                    <a href="" class="accessible-outline">Keramika</a>
-                </div>
-                <div>
-                    <a href="" class="accessible-outline">Výšivky</a>
-                    <a href="" class="accessible-outline">Skartace</a>
-                    <a href="" class="accessible-outline">Dárkové sady</a>
+                    <a href="/sluzby/kompletace.html" class="accessible-outline"
+                        >Kompletační práce</a
+                    >
+                    <a href="/sluzby/potisk.html" class="accessible-outline"
+                        >Potisk</a
+                    >
+                    <a href="/sluzby/laser.html" class="accessible-outline"
+                        >Laser</a
+                    >
+                    <a href="/sluzby/siti.html" class="accessible-outline"
+                        >Šicí dílna</a
+                    >
+                    <a href="/sluzby/keramika.html" class="accessible-outline"
+                        >Keramika</a
+                    >
+                    <a href="/sluzby/vysivky.html" class="accessible-outline"
+                        >Výšivky</a
+                    >
+                    <a href="/sluzby/skartace.html" class="accessible-outline"
+                        >Skartace</a
+                    >
+                    <a
+                        href="/sluzby/darkove-sady.html"
+                        class="accessible-outline"
+                        >Dárkové sady</a
+                    >
                 </div>
             </div>
             <hr />
@@ -839,35 +911,6 @@
                     clickable: true,
                 },
                 navigation: false,
-            });
-        </script>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const navItem = document.getElementById("o-nas-nav");
-                const dropdown = navItem.querySelector(".dropdown");
-
-                navItem.addEventListener("click", function (event) {
-                    // Prevent the default action
-
-                    // Toggle the display of the dropdown
-                    if (dropdown.style.display === "flex") {
-                        dropdown.style.display = "none";
-                    } else {
-                        dropdown.style.display = "flex";
-                    }
-                });
-
-                // Close the dropdown if clicked outside
-                document.addEventListener("click", function (event) {
-                    if (!navItem.contains(event.target)) {
-                        dropdown.style.display = "none";
-                    }
-                });
-
-                // put current year into footer
-                document.getElementById("year").textContent =
-                    new Date().getFullYear();
             });
         </script>
     </body>
