@@ -17,6 +17,8 @@ nav {
 
     position: sticky;
     top: 0;
+
+    font-size: 20px;
 }
 
 #nav-active {
@@ -41,7 +43,6 @@ nav a,
 nav #o-nas-nav span {
     text-decoration: none;
     color: #000;
-    font-size: 20px;
 
     display: inline-block;
     position: relative;
@@ -180,10 +181,10 @@ hr {
     width: 200%;
     height: 100px;
 }
-#menu-text::after {
+.menu-text-menu::after {
     content: "Menu";
 }
-.menu-toggle:checked ~ #menu-text::after {
+.menu-text-zavrit::after {
     content: "Zavřít";
 }
 
@@ -203,24 +204,24 @@ hr {
 }
 
 /* Styles to rotate the spans and form the X icon */
-.menu-toggle:checked ~ .hamburger-menu span:nth-child(1) {
+.hamburger-menu-cross span:nth-child(1) {
     transform: rotate(45deg) translate(9px, 8px);
 }
 
-.menu-toggle:checked ~ .hamburger-menu span:nth-child(2) {
+.hamburger-menu-cross span:nth-child(2) {
     opacity: 0;
 }
 
-.menu-toggle:checked ~ .hamburger-menu span:nth-child(3) {
+.hamburger-menu-cross span:nth-child(3) {
     transform: rotate(-45deg) translate(9px, -8px);
 }
 
 /* Hidden checkbox */
-.menu-toggle {
+input[type="checkbox"] {
     display: none;
 }
 
-#mobile-menu-options {
+.mobile-menu-absolute {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -241,8 +242,8 @@ hr {
     padding-bottom: 20px;
     border-bottom: 5px solid #fff;
 }
-#mobile-menu-options a,
-#mobile-menu-options p {
+.mobile-menu-absolute a,
+.mobile-menu-absolute p {
     color: #fff;
     font-size: 30px;
     width: 100%;
@@ -257,10 +258,12 @@ hr {
     cursor: pointer;
     transition: 0.2s;
 }
-#mobile-menu-options a:hover {
+.mobile-menu-absolute a:hover,
+.mobile-menu-absolute p:hover {
     color: #ddd;
 }
-#mobile-menu-options a::before {
+.mobile-menu-absolute a::before,
+.mobile-menu-absolute p:not(:last-child)::before {
     content: "";
     position: absolute;
 
@@ -272,6 +275,18 @@ hr {
     top: 150%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@media (max-width: 1200px) {
+    nav {
+        padding: 10px 15px;
+
+        font-size: 18px;
+    }
+    #nav-left,
+    #nav-right {
+        gap: 15px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -288,10 +303,6 @@ hr {
         display: flex;
     }
 
-    #mobile-nav:has(#menu-toggle:checked) + #mobile-menu-options {
-        display: flex;
-        flex-direction: column; /* Ensure the menu items stack vertically */
-    }
     hr {
         position: sticky;
         top: 60px;
