@@ -1,0 +1,42 @@
+main {
+    padding: 0 50px;
+}
+
+h1 {
+    color: var(--red);
+    margin-top: 50px;
+
+    font-size: 45px;
+}
+h3 {
+    margin-top: 50px;
+
+    font-size: 30px;
+    color: var(--red);
+}
+ul {
+    margin: 0;
+
+    font-size: 24px;
+}
+li {
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0 20px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 20px;
+    }
+    ul {
+        font-size: 20px;
+    }
+}
