@@ -35,6 +35,13 @@ main h3 {
 
     margin: 5px;
 }
+.prodejna a {
+    font-weight: bold;
+    color: black;
+}
+.prodejna a:hover {
+    color: var(--red);
+}
 
 @media (max-width: 1400px) {
     #grid-prodejny {
