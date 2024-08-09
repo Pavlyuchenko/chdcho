@@ -69,6 +69,8 @@
     padding: 10px;
 
     cursor: pointer;
+
+    touch-action: manipulation;
 }
 
 .lightbox .prev {
