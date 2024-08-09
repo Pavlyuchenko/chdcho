@@ -76,12 +76,12 @@
 
 @media (max-width: 600px) {
     .partner h3 {
-        font-size: 24px;
+        font-size: 20px;
 
         margin-top: 15px;
     }
     .partner a {
-        font-size: 16px;
+        font-size: 14px;
     }
     #partneri-grid {
         gap: 30px;

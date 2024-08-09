@@ -320,3 +320,38 @@ input[type="checkbox"] {
         display: none;
     }
 }
+
+@media (max-width: 600px) {
+    nav {
+        height: 50px;
+    }
+    hr {
+        top: 50px;
+    }
+    #nav-logo {
+        height: 40px;
+        margin-top: 5px;
+    }
+    #menu-text {
+        font-size: 22px;
+    }
+    .hamburger-menu {
+        gap: 5px;
+    }
+    .hamburger-menu span {
+        width: 31px;
+    }
+    #mobile-menu {
+        gap: 10px;
+    }
+    .hamburger-menu-cross span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 6px);
+    }
+    .hamburger-menu-cross span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    .mobile-menu-absolute a,
+    .mobile-menu-absolute p {
+        font-size: 24px;
+    }
+}

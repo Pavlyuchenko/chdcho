@@ -136,6 +136,15 @@
     margin-left: 56px;
     margin-bottom: 80px;
 }
+@media (max-width: 600px) {
+    #nahradni-plneni p {
+        font-size: 20px;
+        margin-left: 48px;
+    }
+    #nahradni-plneni a {
+        margin-left: 48px;
+    }
+}
 
 /* STATISTIKY */
 #statistiky {
@@ -162,6 +171,18 @@
     margin: 0;
 
     text-align: center;
+}
+@media (max-width: 1000px) {
+    #statistiky {
+        flex-direction: column;
+        gap: 20px;
+    }
+    #statistiky h3 {
+        font-size: 40px;
+    }
+    #statistiky p {
+        font-size: 20px;
+    }
 }
 
 /* KDE NAS NAJDETE */
@@ -193,6 +214,21 @@
         height: 300px;
         width: auto;
         box-sizing: border-box;
+    }
+}
+@media (max-width: 600px) {
+    #kde-nas-najdete {
+        box-sizing: border-box;
+    }
+    #kde-nas-najdete p {
+        margin-left: 48px;
+        font-size: 20px;
+    }
+    #kde-nas-najdete iframe {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-left: 0;
     }
 }
 

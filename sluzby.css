@@ -42,6 +42,11 @@
 .sluzba-container:hover .sluzba-fotka {
     transform: scale(1.05); /* Scale up the image slightly */
 }
+@media (max-width: 600px) {
+    .sluzba-container {
+        height: 280px;
+    }
+}
 .sluzba-text {
     position: absolute;
     bottom: 34px;
@@ -58,6 +63,17 @@
     line-height: 1.15;
 
     position: relative;
+}
+@media (max-width: 600px) {
+    .sluzba-text h3 {
+        font-size: 34px;
+    }
+    .sluzba-text p {
+        font-size: 18px;
+    }
+    .sluzba-text {
+        bottom: 20px;
+    }
 }
 .sluzba-text h3::before {
     content: "🡒"; /* Unicode character for the arrow */
