@@ -1,0 +1,32 @@
+main {
+    margin: 0 50px;
+}
+
+#kontakt-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+
+    color: #fff !important;
+
+    text-align: center;
+}
+
+.kontakt h2 {
+    font-size: 40px;
+    margin: 0;
+    color: #fff !important;
+    text-align: center !important;
+    display: block;
+}
+.kontakt h2::before,
+.kontakt h2::after {
+    display: none;
+}
+
+.kontakt {
+    background-color: var(--red);
+}
+.kontakt p {
+    margin: 10px 0;
+}
