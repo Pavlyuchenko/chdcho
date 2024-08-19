@@ -20,10 +20,14 @@ header #gradient-image {
 
 header h1 {
     position: absolute;
-    bottom: 100px;
+    bottom: 80px;
     left: 50px;
 
     font-size: 68px;
+    color: #fff;
+}
+header h1::before {
+    display: none !important;
 }
 
 header a {

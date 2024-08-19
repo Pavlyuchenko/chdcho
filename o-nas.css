@@ -2,12 +2,6 @@ main {
     padding: 0 50px;
 }
 
-h1 {
-    color: var(--red);
-    margin-top: 50px;
-
-    font-size: 45px;
-}
 h3 {
     margin-top: 50px;
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Slide-Up Text Animation</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                height: 200vh; /* Create enough space to scroll */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #f0f0f0;
+            }
+
+            .text-container {
+                font-size: 2em;
+                color: #333;
+                opacity: 0; /* Initially hidden */
+                transform: translateY(50px); /* Start position (off-screen) */
+                transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Smooth slide and fade */
+            }
+
+            .text-container.in-view {
+                opacity: 1;
+                transform: translateY(0); /* End position (on-screen) */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="text-container" id="animate-text">
+            Hello, this text slides up as you scroll!
+        </div>
+
+        <script>
+            // Create an intersection observer
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("in-view");
+                            // Stop observing the element once the animation is triggered
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.5 }
+            ); // Trigger when 50% of the element is in view
+
+            // Observe the text container
+            const textContainer = document.getElementById("animate-text");
+            observer.observe(textContainer);
+        </script>
+    </body>
+</html>

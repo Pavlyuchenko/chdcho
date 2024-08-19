@@ -33,6 +33,18 @@
 
     z-index: 10;
 }
+.title-text h1 {
+    font-weight: 700;
+    font-size: 64px;
+
+    margin: 0;
+    margin-bottom: 20px;
+
+    color: #fff;
+}
+.title-text h1::before {
+    display: none !important;
+}
 .title-text p {
     font-size: 24px;
     font-weight: 500;
