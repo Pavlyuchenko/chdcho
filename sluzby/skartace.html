@@ -46,8 +46,13 @@
                 <a href="../nahradni-plneni.html" class="accessible-outline">
                     Náhradní plnění
                 </a>
-                <div id="o-nas-nav" class="nav-item">
-                    <span tabindex="0" class="accessible-outline">O nás</span>
+                <div id="o-nas-nav" class="nav-item" aria-expanded="false">
+                    <span
+                        tabindex="0"
+                        class="accessible-outline"
+                        aria-haspopup="menu"
+                        >O nás</span
+                    >
                     <div class="dropdown">
                         <a href="../o-nas.html" class="accessible-outline">
                             O chdcho
@@ -340,13 +345,14 @@
                     const dropdown = navItem.querySelector(".dropdown");
 
                     navItem.addEventListener("click", function (event) {
-                        // Prevent the default action
-
                         // Toggle the display of the dropdown
                         if (dropdown.style.display === "flex") {
                             dropdown.style.display = "none";
+                            navItem.setAttribute("aria-expanded", false);
                         } else {
                             dropdown.style.display = "flex";
+
+                            navItem.setAttribute("aria-expanded", true);
                         }
                     });
 
@@ -354,6 +360,8 @@
                     document.addEventListener("click", function (event) {
                         if (!navItem.contains(event.target)) {
                             dropdown.style.display = "none";
+
+                            navItem.setAttribute("aria-expanded", "false");
                         }
                     });
 
@@ -665,9 +673,15 @@
 
             <div id="footer-hlavni-partneri">
                 <p>HLAVNÍ PARTNEŘI</p>
-                <img src="../fotky/loga/opava.png" alt="" />
-                <img src="../fotky/loga/msk.png" alt="" />
-                <img src="../fotky/loga/urad_prace.png" alt="" />
+                <a href="https://www.opava-city.cz/cz/" target="_blank">
+                    <img src="../fotky/loga/opava.png" alt="" />
+                </a>
+                <a href="https://www.msk.cz/" target="_blank">
+                    <img src="../fotky/loga/msk.png" alt="" />
+                </a>
+                <a href="https://www.uradprace.cz/opava" target="_blank">
+                    <img src="../fotky/loga/urad_prace.png" alt="" />
+                </a>
             </div>
 
             <hr />

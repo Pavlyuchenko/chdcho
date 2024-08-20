@@ -7,6 +7,8 @@
 
         <link rel="stylesheet" href="global.css" />
         <link rel="stylesheet" href="nav.css" />
+        <link rel="stylesheet" href="kurzy.css" />
+        <link rel="stylesheet" href="/sluzby/sluzba.css" />
 
         <link rel="shortcut icon" href="/favico.png" type="image/x-icon" />
     </head>
@@ -30,8 +32,13 @@
                 <a href="nahradni-plneni.html" class="accessible-outline">
                     Náhradní plnění
                 </a>
-                <div id="o-nas-nav" class="nav-item">
-                    <span tabindex="0" class="accessible-outline">O nás</span>
+                <div id="o-nas-nav" class="nav-item" aria-expanded="false">
+                    <span
+                        tabindex="0"
+                        class="accessible-outline"
+                        aria-haspopup="menu"
+                        >O nás</span
+                    >
                     <div class="dropdown">
                         <a href="o-nas.html" class="accessible-outline">
                             O chdcho
@@ -326,13 +333,14 @@
                     const dropdown = navItem.querySelector(".dropdown");
 
                     navItem.addEventListener("click", function (event) {
-                        // Prevent the default action
-
                         // Toggle the display of the dropdown
                         if (dropdown.style.display === "flex") {
                             dropdown.style.display = "none";
+                            navItem.setAttribute("aria-expanded", false);
                         } else {
                             dropdown.style.display = "flex";
+
+                            navItem.setAttribute("aria-expanded", true);
                         }
                     });
 
@@ -340,6 +348,8 @@
                     document.addEventListener("click", function (event) {
                         if (!navItem.contains(event.target)) {
                             dropdown.style.display = "none";
+
+                            navItem.setAttribute("aria-expanded", "false");
                         }
                     });
 
@@ -350,16 +360,63 @@
             </script>
         </nav>
         <hr />
-        <main></main>
+        <main>
+            <h1>Kurzy</h1>
+            <p>
+                V Chráněných dílnách Charity Opava nabízíme také kurzy šití,
+                které jsou rozděleny do tří kategorií:
+            </p>
+            <div class="success-badge-container">
+                <div class="success-badge">
+                    <div class="circle">
+                        <div class="tick"></div>
+                    </div>
+                    Pro začátečníky
+                </div>
+                <div class="success-badge">
+                    <div class="circle">
+                        <div class="tick"></div>
+                    </div>
+                    Pro pokročilé
+                </div>
+                <div class="success-badge">
+                    <div class="circle">
+                        <div class="tick"></div>
+                    </div>
+                    Technologie výroby oděvů
+                </div>
+            </div>
+            <p>
+                Kurzy otevíráme v jarním a podzimním běhu. Jedná se o kurzy
+                probíhající v plně vybavené šicí dílně s důrazem na individuální
+                přístup ve skupinkách 4 osob.
+            </p>
+            <p>
+                Aktuální kurzy zveřejňujeme na našem e-shopu, webu, facebooku
+                nebo v tisku.
+            </p>
+        </main>
 
         <footer>
             <hr />
 
             <div id="footer-hlavni-partneri">
                 <p>HLAVNÍ PARTNEŘI</p>
-                <img src="fotky/loga/opava.png" alt="" />
-                <img src="fotky/loga/msk.png" alt="" />
-                <img src="fotky/loga/urad_prace.png" alt="" />
+                <a href="https://www.opava-city.cz/cz/" target="_blank">
+                    <img src="fotky/loga/opava.png" alt="Logo města Opavy" />
+                </a>
+                <a href="https://www.msk.cz/" target="_blank">
+                    <img
+                        src="fotky/loga/msk.png"
+                        alt="Logo Moravskoslezského kraje"
+                    />
+                </a>
+                <a href="https://www.uradprace.cz/opava" target="_blank">
+                    <img
+                        src="fotky/loga/urad_prace.png"
+                        alt="Logo úřadu práce"
+                    />
+                </a>
             </div>
 
             <hr />

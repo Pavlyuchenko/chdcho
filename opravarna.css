@@ -1,7 +1,3 @@
-main {
-    margin: 0 50px;
-}
-
 #main-info {
     display: grid;
 
@@ -87,10 +83,6 @@ main section {
 @media (max-width: 1000px) {
     #loga {
         gap: 40px;
-    }
-
-    main {
-        margin: 0 15px;
     }
 
     #main-info {

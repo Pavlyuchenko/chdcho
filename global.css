@@ -17,25 +17,6 @@
     --red: #c20d0e;
 }
 
-/* 
-@font-face {
-    font-family: "Calibri";
-    src: url("../fonts/Alegreya-Regular.ttf");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "Calibri";
-    src: url("../fonts/Alegreya-Medium.ttf");
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: "Calibri";
-    src: url("../fonts/Alegreya-Bold.ttf");
-    font-weight: 700;
-} */
-
 html,
 body {
     font-family: "Calibri", serif;
@@ -52,7 +33,6 @@ body {
     padding: 0;
 }
 
-h1,
 h2,
 h3 {
     margin-top: 80px;
@@ -95,9 +75,14 @@ h2 {
     align-items: center;
     gap: 18px;
 
-    margin-top: 100px;
-
     text-wrap: nowrap;
+}
+
+h1 {
+    margin-top: 50px;
+}
+h2 {
+    margin-top: 100px;
 }
 
 @media (max-width: 1000px) {
@@ -455,4 +440,13 @@ footer hr {
 }
 .copy-to-clipboard {
     cursor: pointer;
+}
+
+main {
+    margin: 0 50px;
+}
+@media (max-width: 1200px) {
+    main {
+        margin: 0 15px;
+    }
 }

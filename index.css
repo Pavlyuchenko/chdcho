@@ -6,6 +6,9 @@
     position: relative;
     overflow: hidden;
 }
+main {
+    margin: 0 !important;
+}
 
 .gradient-overlay {
     position: absolute;

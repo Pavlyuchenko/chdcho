@@ -1,7 +1,3 @@
-main {
-    margin: 0 50px;
-}
-
 #kontakt-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

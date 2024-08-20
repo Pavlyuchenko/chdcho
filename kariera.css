@@ -1,5 +1,4 @@
 main {
-    margin: 0 50px;
     padding-left: calc(38px + 18px);
 }
 
@@ -109,9 +108,6 @@ main h3::before {
     }
     .kariera-bonus p {
         font-size: 22px;
-    }
-    main {
-        margin: 0 15px;
     }
     h2 {
         margin-left: 15px;
