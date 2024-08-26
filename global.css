@@ -413,8 +413,6 @@ footer hr {
     }
 }
 @media (max-width: 600px) {
-    #footer-hlavni-partneri {
-    }
     #footer-hlavni-partneri img {
         max-width: 250px;
         max-height: 80px;
