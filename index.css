@@ -52,8 +52,6 @@ section:not(#hero):not(#statistiky) {
 
     padding: 20px 50px;
 
-    border-radius: 0 5px 5px 0;
-
     z-index: 10;
 }
 .title-text h1 {
@@ -290,4 +288,23 @@ section:not(#hero):not(#statistiky) {
     #kde-nas-najdete {
         margin: 0 15px;
     }
+}
+
+#mapka-arealu-text {
+    background-color: var(--red);
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+
+    padding: 10px 20px;
+
+    display: inline-block;
+    margin: 20px 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+#mapka-arealu-text:hover {
+    text-decoration: underline;
 }
