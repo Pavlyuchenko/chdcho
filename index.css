@@ -294,6 +294,10 @@ section:not(#hero):not(#statistiky) {
     }
 }
 
+#mapka-wrapper {
+    display: flex;
+    justify-content: center;
+}
 #mapka-arealu-text {
     background-color: var(--red);
     color: #fff;
@@ -306,8 +310,6 @@ section:not(#hero):not(#statistiky) {
 
     display: inline-block;
     margin: 20px 0;
-    margin-left: 50%;
-    transform: translateX(-50%);
 }
 #mapka-arealu-text:hover {
     text-decoration: underline;
