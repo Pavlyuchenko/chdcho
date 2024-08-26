@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="prodejny.css" />
 
         <link rel="shortcut icon" href="/favico.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favico.png" type="image/x-icon" />
     </head>
     <body>
         <nav>
@@ -32,7 +33,13 @@
                     Náhradní plnění
                 </a>
                 <div id="o-nas-nav" class="nav-item" aria-expanded="false">
-                    <span tabindex="0" class="accessible-outline" aria-haspopup="menu">O nás</span>
+                    <span
+                        tabindex="0"
+                        class="accessible-outline"
+                        aria-haspopup="menu"
+                        id="nav-active"
+                        >O nás</span
+                    >
                     <div class="dropdown">
                         <a href="o-nas.html" class="accessible-outline">
                             O chdcho
@@ -384,11 +391,11 @@
                     <p>
                         Adresa:
                         <a
-                        href="https://maps.app.goo.gl/7SEiQDknwPEncA8u7"
-                        target="_blank"
-                        >U Fortny 10 (1. poschodí naproti poště)</a
+                            href="https://maps.app.goo.gl/7SEiQDknwPEncA8u7"
+                            target="_blank"
+                            >U Fortny 10 (1. poschodí naproti poště)</a
                         >
-                        <p>Telefon: <b>735 740 061</b></p>
+                        Telefon: <b>735 740 061</b>
                     </p>
                 </div>
                 <div class="prodejna">
@@ -398,12 +405,12 @@
                     <p>
                         Adresa:
                         <a
-                        href="https://maps.app.goo.gl/68BjLb4VxMNQm2gZ9"
-                        target="_blank"
-                        >Přemyslovců 37, Opava-Jaktař</a
+                            href="https://maps.app.goo.gl/68BjLb4VxMNQm2gZ9"
+                            target="_blank"
+                            >Přemyslovců 37, Opava-Jaktař</a
                         >
+                        Telefon: <b>733 676 679</b>
                     </p>
-                    <p>Telefon: <b>733 676 679</b></p>
                 </div>
             </div>
         </main>
@@ -438,8 +445,8 @@
                     <p>Přemyslovců 529/37</p>
                     <p>747 07, Opava 7, Jaktař</p>
                     <p>Telefon 553 654 690</p>
-<p>553 654 696</p>
-<p>553 764 057</p>
+                    <p>553 654 696</p>
+                    <p>553 764 057</p>
                     <p>chdcho@charitaopava.cz</p>
                     <p>www.chdcho.cz</p>
                 </div>
@@ -545,10 +552,9 @@
                     &copy; <span id="year"></span> Chráněné dílny Charity Opava.
                 </p>
                 <div id="footer-legal">
-                    <a href="" class="accessible-outline">Legální dokumenty</a>
-                    <a href="" class="accessible-outline">
-                        Informace o provozovateli
-                    </a>
+                    <a href="/dokumenty.html" class="accessible-outline"
+                        >Legální dokumenty</a
+                    >
                 </div>
             </div>
         </footer>

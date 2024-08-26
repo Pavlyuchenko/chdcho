@@ -3,17 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Skartace a demagnetizace | Chráněné dílny Charity Opava</title>
+        <title>Hlavní stránka | Chráněné dílny Charity Opava</title>
 
-        <link rel="stylesheet" href="../global.css" />
-        <link rel="stylesheet" href="../nav.css" />
-        <link rel="stylesheet" href="../gallery.css" />
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/swiper/swiper-bundle.min.css"
-        />
-        <link rel="stylesheet" href="sluzba.css" />
-        <link rel="stylesheet" href="../partneri.css" />
+        <link rel="stylesheet" href="global.css" />
+        <link rel="stylesheet" href="nav.css" />
+        <link rel="stylesheet" href="dokumenty.css" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,25 +20,21 @@
     <body>
         <nav>
             <div id="nav-left">
-                <a href="../" class="accessible-outline" aria-label="Domů">
+                <a href="/" class="accessible-outline" aria-label="Domů">
                     <img
-                        src="../hlavni_fotky/charita_logo.png"
+                        src="hlavni_fotky/charita_logo.png"
                         alt=""
                         id="nav-logo"
                     />
                 </a>
-                <a href="../" class="accessible-outline active">Domů</a>
-                <a
-                    href="../../sluzby.html"
-                    class="accessible-outline"
-                    id="nav-active"
-                >
+                <a href="/" class="accessible-outline active">Domů</a>
+                <a href="sluzby.html" class="accessible-outline">
                     Naše služby
                 </a>
-                <!-- <a href="../aktuality.html" class="accessible-outline">
+                <!-- <a href="aktuality.html" class="accessible-outline">
                     Aktuality
                 </a> -->
-                <a href="../nahradni-plneni.html" class="accessible-outline">
+                <a href="nahradni-plneni.html" class="accessible-outline">
                     Náhradní plnění
                 </a>
                 <div id="o-nas-nav" class="nav-item" aria-expanded="false">
@@ -52,27 +42,28 @@
                         tabindex="0"
                         class="accessible-outline"
                         aria-haspopup="menu"
+                        id="nav-active"
                         >O nás</span
                     >
                     <div class="dropdown">
-                        <a href="../o-nas.html" class="accessible-outline">
+                        <a href="o-nas.html" class="accessible-outline">
                             O chdcho
                         </a>
-                        <a href="../prodejny.html" class="accessible-outline">
+                        <a href="prodejny.html" class="accessible-outline">
                             Prodejny
                         </a>
-                        <a href="../kontakt.html" class="accessible-outline">
+                        <a href="kontakt.html" class="accessible-outline">
                             Kontakt
                         </a>
-                        <a href="../kariera.html" class="accessible-outline">
+                        <a href="kariera.html" class="accessible-outline">
                             Kariéra
                         </a>
                     </div>
                 </div>
             </div>
             <div id="nav-right">
-                <a href="../kurzy.html" class="accessible-outline">Kurzy</a>
-                <a href="../opravarna.html" class="accessible-outline">
+                <a href="kurzy.html" class="accessible-outline">Kurzy</a>
+                <a href="opravarna.html" class="accessible-outline">
                     Opravárna
                 </a>
                 <a
@@ -92,9 +83,9 @@
             </div>
 
             <div id="mobile-nav">
-                <a href="../" class="accessible-outline">
+                <a href="/" class="accessible-outline">
                     <img
-                        src="../hlavni_fotky/charita_logo.png"
+                        src="hlavni_fotky/charita_logo.png"
                         alt=""
                         id="nav-logo"
                     />
@@ -117,29 +108,29 @@
                 </div>
             </div>
             <div id="mobile-menu-options" class="mobile-menu-absolute">
-                <a href="../">Domů</a>
+                <a href="/">Domů</a>
                 <a href="https://www.kramekprotebe.cz/" target="_blank"
                     >E-shop ↗</a
                 >
-                <a href="../sluzby.html">Naše služby</a>
-                <a href="../nahradni-plneni.html">Náhradní plnění</a>
+                <a href="sluzby.html">Naše služby</a>
+                <a href="nahradni-plneni.html">Náhradní plnění</a>
                 <p id="o-nas-mobile">O nás →</p>
                 <p id="projekty-mobile">Projekty →</p>
                 <p id="close-menu">✕ Skrýt menu</p>
             </div>
 
             <div id="mobile-menu-o-nas-options" class="mobile-menu-absolute">
-                <a href="../o-nas.html">O chdcho</a>
-                <a href="../prodejny.html">Prodejny</a>
-                <a href="../kontakt.html">Kontakt</a>
-                <a href="../kariera.html">Kariéra</a>
+                <a href="o-nas.html">O chdcho</a>
+                <a href="prodejny.html">Prodejny</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="kariera.html">Kariéra</a>
                 <p id="mobile-back1">← Zpět</p>
                 <p id="close-menu2">✕ Skrýt menu</p>
             </div>
             <div id="mobile-menu-projekty-options" class="mobile-menu-absolute">
-                <a href="../kurzy.html">Kurzy</a>
-                <a href="../opravarna.html">Opravárna</a>
-                <a href="../https://charitaopava.cz" target="_blank"
+                <a href="kurzy.html">Kurzy</a>
+                <a href="opravarna.html">Opravárna</a>
+                <a href="https://charitaopava.cz" target="_blank"
                     >Charita Opava</a
                 >
                 <p id="mobile-back2">← Zpět</p>
@@ -374,318 +365,96 @@
         </nav>
         <hr />
 
-        <header>
-            <img src="imgs/skartace.png" alt="" id="title-image" />
-            <img src="imgs/sluzba_gradient.png" alt="" id="gradient-image" />
+        <main>
+            <h1>Dokumenty ke stažení</h1>
 
-            <h1>Skartace a demagnetizace</h1>
-            <a href="../sluzby.html" class="accessible-outline">Služby</a>
-        </header>
-
-        <main id="sluzby-main">
-            <section>
-                <p>
-                    Nabízíme profesionální skartaci dokumentů na
-                    velkokapacitních strojích INTIMUS. Skartace probíhá v
-                    uzavřeném prostoru a pod kamerovým dohledem.
-                </p>
-                <p>
-                    Těm, kteří potřebují například v návaznosti na směrnici GDPR
-                    likvidovat data na svých HDD nebo magnetických nosičích,
-                    nabízíme službu demagnetizace na zařízení INTIMUS 9000,
-                    využívaný pro likvidaci dat také aliancí NATO. Zařazení se
-                    vejde do kufru auta a lze s ním tak přijet k zákazníkovi.
-                </p>
-
-                <div class="callout">
-                    <div class="callout-dash"></div>
-                    <div class="callout-text">
-                        Ke skartaci přijímáme vytříděný i nevytříděný papír
-                        (celé šanony, závěsné složky, PE složky, knihy, atd.).
-                    </div>
-                </div>
-
-                <p>
-                    Po domluvě umožňujeme osobní přítomnost u skartace, případně
-                    si můžete vyžádat video z průběhu skartace. Žádost o video
-                    musí být uvedena při předání materiálu a datový nosič je
-                    zpoplatněn. Samozřejmostí je vydání potvrzení o skartaci
-                    dokumentů, kterou zasíláme zároveň s fakturou.
-                </p>
-
-                <p>
-                    Po Opavě nabízíme svoz většího množství materiálu ke
-                    skartaci zdarma, z ostatních míst po domluvě za úplatu.
-                    Standardně přijímáme i kamionové množství materiálu denně.
-                    Každá dodávka je zvážena na můstkové nebo mostové váze.
-                </p>
-                <p>
-                    Ke skartaci přijímáme také nevytříděné dokumenty, jako
-                    dokumenty v šanonech, závěsných nebo PE složkách, případně
-                    knihy a podobně. Cena je však vyšší kvůli tomu, že je třeba
-                    dokumenty nejprve vytřídit.
-                </p>
-
-                <div class="callout">
-                    <div id="infoBox"></div>
-                    <div class="callout-dash"></div>
-                    <div class="callout-text">
-                        <p id="callout-kontakt-text">
-                            Kontakt na odpovědnou osobu
-                        </p>
-                        <div id="callout-kontakt">
-                            <div
-                                onclick="copyToClipboard('Jméno bylo zkopírováno', 'contact-jmeno')"
-                                class="copy-to-clipboard"
-                            >
-                                <img src="../fotky/ostatni/person.png" alt="" />
-                                <p id="contact-jmeno">
-                                    Ing. Tomáš Schaffartzik
-                                </p>
-                            </div>
-                            <div
-                                onclick="copyToClipboard('Email byl zkopírován', 'contact-email')"
-                                class="copy-to-clipboard"
-                            >
-                                <img src="../fotky/ostatni/email.png" alt="" />
-                                <p id="contact-email">
-                                    schaffartzik@charitaopava.cz
-                                </p>
-                            </div>
-                            <div
-                                onclick="copyToClipboard('Telefon byl zkopírován', 'contact-telefon')"
-                                class="copy-to-clipboard"
-                            >
-                                <img src="../fotky/ostatni/phone.png" alt="" />
-                                <p id="contact-telefon">731 625 802</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    function copyToClipboard(what, id) {
-                        const thingToCopy =
-                            document.getElementById(id).textContent;
-                        navigator.clipboard
-                            .writeText(thingToCopy)
-                            .then(() => {
-                                const infoBox =
-                                    document.getElementById("infoBox");
-                                infoBox.textContent = what + " do schránky.";
-
-                                setTimeout(() => {
-                                    infoBox.style.top = "10px";
-                                }, 10); // Slight delay to trigger transition
-
-                                setTimeout(() => {
-                                    infoBox.style.top = "-50px";
-                                }, 3000);
-                            })
-                            .catch((err) => {
-                                console.error("Failed to copy: ", err);
-                            });
-                    }
-                </script>
-
-                <div>
-                    <h2>Otázky a odpovědi</h2>
-                    <div class="qna">
-                        <div class="question">
-                            Skartujete taky důvěrné dokumenty?
-                        </div>
-                        <div class="answer">
-                            Naše skartovací stroje nemají certifikaci na stupeň
-                            důvěrné.
-                        </div>
-                    </div>
-                    <div class="qna">
-                        <div class="question">
-                            Jaké jsou náklady na skartaci dokumentů?
-                        </div>
-                        <div class="answer">
-                            Záleží, v jaké podobě k nám materiál dorazí, zda se
-                            jedná o vytříděný nebo nevytříděný materiál v
-                            případě papírových dokumentů nebo zda se jedná o
-                            magnetický nosič. V ceně se odrazí i skutečnost
-                            pokud byla domluvena doprava a případně požadován
-                            výnos materiálu např. ze sklepa nebo půdy. Ceny
-                            zjistíte po zavolání.
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    var questions = document.querySelectorAll(".question");
-                    questions.forEach(function (question) {
-                        question.addEventListener("click", function () {
-                            var answer = this.nextElementSibling;
-                            if (answer.style.display === "block") {
-                                answer.style.display = "none";
-                                // change question ::before symbol to ▸ and remove ▾
-                                question.classList.remove("closed-question");
-                            } else {
-                                answer.style.display = "block";
-                                // change question ::before symbol to ▾
-                                question.classList.add("closed-question");
-                            }
-                        });
-                    });
-                });
-            </script>
-
-            <aside>
-                <div id="contact-form">
-                    <h2>Kontaktujte nás</h2>
-                    <label for="name">Jméno a příjmení *</label>
-                    <input
-                        type="text"
-                        class="accessible-outline"
-                        name="name"
-                        id="name"
-                    />
-
-                    <label for="company">Název firmy/organizace</label>
-                    <input
-                        type="text"
-                        class="accessible-outline"
-                        name="company"
-                        id="company"
-                    />
-
-                    <label for="email">E-mail *</label>
-                    <input
-                        type="email"
-                        class="accessible-outline"
-                        name="email"
-                        id="email"
-                        autocomplete="on"
-                        autocompletetype="email"
-                    />
-
-                    <label for="phone">Telefon</label>
-                    <input
-                        type="tel"
-                        placeholder="+420 777 777 777"
-                        class="accessible-outline"
-                        name="phone"
-                        id="phone"
-                    />
-
-                    <label for="message">Text zprávy*</label>
-                    <textarea
-                        name="message"
-                        id="message"
-                        cols="30"
-                        rows="4"
-                        class="accessible-outline"
-                    ></textarea>
-
-                    <button class="accessible-outline">Odeslat zprávu</button>
-                    <a href="" class="accessible-outline"
-                        >Ochrana soukromí a podmínky</a
+            <div class="dokumenty-stazeni">
+                <div id="certifications">
+                    <a
+                        href="/dokumenty/Obchodni_podminky_chdcho.pdf"
+                        class="certification"
+                        target="_blank1"
                     >
+                        <img src="../fotky/loga/pdf_icon.png" alt="" />
+                        <p>Obchodní podmínky</p>
+                    </a>
                 </div>
-            </aside>
+                <div id="certifications">
+                    <a
+                        href="/dokumenty/ochrana_osobnich_udaju.pdf"
+                        class="certification"
+                        target="_blank1"
+                    >
+                        <img src="../fotky/loga/pdf_icon.png" alt="" />
+                        <p>Podmínky ochrany osobních údajů</p>
+                    </a>
+                </div>
+                <div id="certifications">
+                    <a
+                        href="/dokumenty/reklamacni_rad.pdf"
+                        class="certification"
+                        target="_blank1"
+                    >
+                        <img src="../fotky/loga/pdf_icon.png" alt="" />
+                        <p>Reklamační řád</p>
+                    </a>
+                </div>
+            </div>
+
+            <h2>Certifikace</h2>
+            <div class="dokumenty-stazeni">
+                <div id="certifications">
+                    <a
+                        href="/dokumenty/weelabex.pdf"
+                        class="certification"
+                        target="_blank1"
+                    >
+                        <img src="../fotky/loga/pdf_icon.png" alt="" />
+                        <p>Certifikace WEEELABEX</p>
+                    </a>
+                </div>
+                <div id="certifications">
+                    <a
+                        href="/dokumenty/iso_9001.pdf"
+                        class="certification"
+                        target="_blank1"
+                    >
+                        <img src="../fotky/loga/pdf_icon.png" alt="" />
+                        <p>ISO 9001</p>
+                    </a>
+                </div>
+                <div id="certifications">
+                    <a
+                        href="/dokumenty/iso_14001.pdf"
+                        class="certification"
+                        target="_blank1"
+                    >
+                        <img src="../fotky/loga/pdf_icon.png" alt="" />
+                        <p>ISO 14001</p>
+                    </a>
+                </div>
+            </div>
         </main>
 
-        <div class="gallery">
-            <img src="../fotky/skartace/skartace1.jpg" alt="Image 1" />
-            <img src="../fotky/skartace/skartace2.jpg" alt="Image 2" />
-            <img src="../fotky/skartace/skartace3.jpg" alt="Image 3" />
-            <img src="../fotky/skartace/skartace4.jpg" alt="Image 4" />
-        </div>
-
-        <div class="lightbox" id="lightbox">
-            <span class="close" id="close">&times;</span>
-            <img class="lightbox-img" id="lightbox-img" src="" />
-
-            <!-- next and prev -->
-            <button id="prev" class="prev">❮</button>
-            <button id="next" class="next">❯</button>
-        </div>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const galleryImages = document.querySelectorAll(".gallery img");
-                const lightbox = document.getElementById("lightbox");
-                const lightboxImg = document.getElementById("lightbox-img");
-                const closeBtn = document.getElementById("close");
-
-                var currentImageIndex = 0;
-
-                galleryImages.forEach((image) => {
-                    image.addEventListener("click", () => {
-                        lightbox.style.display = "flex";
-                        lightboxImg.src = image.src;
-
-                        currentImageIndex = Array.from(galleryImages).findIndex(
-                            (img) => img.src === image.src
-                        );
-
-                        lightboxImg.src = galleryImages[currentImageIndex].src;
-                    });
-                });
-
-                closeBtn.addEventListener("click", () => {
-                    lightbox.style.display = "none";
-                });
-
-                lightbox.addEventListener("click", (e) => {
-                    if (e.target !== lightboxImg && e.target !== closeBtn) {
-                        lightbox.style.display = "none";
-                    }
-                });
-
-                const prevBtn = document.getElementById("prev");
-                const nextBtn = document.getElementById("next");
-
-                prevBtn.addEventListener("click", (e) => {
-                    e.stopPropagation();
-
-                    currentImageIndex =
-                        (currentImageIndex - 1 + galleryImages.length) %
-                        galleryImages.length;
-                    lightboxImg.src = galleryImages[currentImageIndex].src;
-                });
-
-                nextBtn.addEventListener("click", (e) => {
-                    e.stopPropagation();
-
-                    currentImageIndex =
-                        (currentImageIndex + 1) % galleryImages.length;
-                    lightboxImg.src = galleryImages[currentImageIndex].src;
-                });
-
-                document.addEventListener("keydown", (e) => {
-                    if (e.key === "Escape") {
-                        lightbox.style.display = "none";
-                    } else if (e.key === "ArrowLeft") {
-                        currentImageIndex =
-                            (currentImageIndex - 1 + galleryImages.length) %
-                            galleryImages.length;
-                        lightboxImg.src = galleryImages[currentImageIndex].src;
-                    } else if (e.key === "ArrowRight") {
-                        currentImageIndex =
-                            (currentImageIndex + 1) % galleryImages.length;
-                        lightboxImg.src = galleryImages[currentImageIndex].src;
-                    }
-                });
-            });
-        </script>
         <footer>
             <hr />
 
             <div id="footer-hlavni-partneri">
                 <p>HLAVNÍ PARTNEŘI</p>
                 <a href="https://www.opava-city.cz/cz/" target="_blank">
-                    <img src="../fotky/loga/opava.png" alt="" />
+                    <img src="fotky/loga/opava.png" alt="Logo města Opavy" />
                 </a>
                 <a href="https://www.msk.cz/" target="_blank">
-                    <img src="../fotky/loga/msk.png" alt="" />
+                    <img
+                        src="fotky/loga/msk.png"
+                        alt="Logo Moravskoslezského kraje"
+                    />
                 </a>
                 <a href="https://www.uradprace.cz/opava" target="_blank">
-                    <img src="../fotky/loga/urad_prace.png" alt="" />
+                    <img
+                        src="fotky/loga/urad_prace.png"
+                        alt="Logo úřadu práce"
+                    />
                 </a>
             </div>
 
@@ -778,22 +547,22 @@
             <hr />
             <div id="footer-hlavni-partneri">
                 <p>CERTIFIKACE</p>
-                <a href="/dokumenty/iso_14001.pdf" target="_blank">
+                <a href="dokumenty/iso_14001.pdf" target="_blank">
                     <img
-                        src="../fotky/certifikace/iso_14001.png"
+                        src="/fotky/certifikace/iso_14001.png"
                         alt=""
                         height="120"
                     />
                 </a>
-                <a href="/dokumenty/iso_9001.pdf" target="_blank">
+                <a href="dokumenty/iso_9001.pdf" target="_blank">
                     <img
-                        src="../fotky/certifikace/iso_9001.png"
+                        src="/fotky/certifikace/iso_9001.png"
                         alt=""
                         height="120"
                 /></a>
-                <a href="/dokumenty/weelabex.pdf" target="_blank">
+                <a href="dokumenty/weelabex.pdf" target="_blank">
                     <img
-                        src="../fotky/certifikace/weelabex.png"
+                        src="/fotky/certifikace/weelabex.png"
                         alt=""
                         height="120"
                 /></a>

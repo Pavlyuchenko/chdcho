@@ -10,6 +10,16 @@ main {
     margin: 0 !important;
 }
 
+#sluzby {
+    margin-top: 50px !important;
+}
+section:not(#hero):not(#statistiky) {
+    margin: 100px 50px;
+}
+.main-h2 {
+    margin-top: 0;
+}
+
 .gradient-overlay {
     position: absolute;
     top: 0;
